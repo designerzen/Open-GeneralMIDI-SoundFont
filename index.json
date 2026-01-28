@@ -1,0 +1,2229 @@
+[
+    {
+        "program": 0,
+        "name": "acoustic_grand_piano",
+        "label": "Acoustic Grand Piano",
+        "category": "Pianos & Keyboards",
+        "description": "A full-sized concert grand piano with rich, resonant tones across the entire range. Features the characteristic hammer strikes and string resonance.",
+        "commonUses": [
+            "Classical music",
+            "Jazz",
+            "Film scores",
+            "Ballads"
+        ],
+        "alternateNames": [
+            "Grand Piano",
+            "Concert Piano"
+        ],
+        "folder": "acoustic_grand_piano-mp3"
+    },
+    {
+        "program": 1,
+        "name": "bright_acoustic_piano",
+        "label": "Bright Acoustic Piano",
+        "category": "Pianos & Keyboards",
+        "description": "An acoustic piano with a brighter, more percussive attack. Emphasizes the higher harmonics for a more cutting tone.",
+        "commonUses": [
+            "Contemporary classical",
+            "Upbeat pop",
+            "Ragtime"
+        ],
+        "alternateNames": [
+            "Bright Piano",
+            "Upright Piano sound"
+        ],
+        "folder": "bright_acoustic_piano-mp3"
+    },
+    {
+        "program": 2,
+        "name": "electric_grand_piano",
+        "label": "Electric Grand Piano",
+        "category": "Pianos & Keyboards",
+        "description": "An electronically amplified grand piano with a slightly processed, warm tone. Less resonance than acoustic.",
+        "commonUses": [
+            "Rock",
+            "Pop",
+            "Soul",
+            "R&B"
+        ],
+        "alternateNames": [
+            "Electric Piano",
+            "Stage Piano"
+        ],
+        "folder": "electric_grand_piano-mp3"
+    },
+    {
+        "program": 3,
+        "name": "honkytonk_piano",
+        "label": "Honky Tonk Piano",
+        "category": "Pianos & Keyboards",
+        "description": "A slightly detuned piano with a nostalgic, ragtime character. Evokes saloon and honky-tonk music from the early 20th century.",
+        "commonUses": [
+            "Honky tonk",
+            "Ragtime",
+            "Country",
+            "Comedic scores"
+        ],
+        "alternateNames": [
+            "Saloon Piano",
+            "Ragtime Piano"
+        ],
+        "folder": "honkytonk_piano-mp3"
+    },
+    {
+        "program": 4,
+        "name": "electric_piano_1",
+        "label": "Electric Piano 1",
+        "category": "Pianos & Keyboards",
+        "description": "A Rhodes-style electric piano with warm, mellow tones. Features bell-like overtones characteristic of tines striking pickups.",
+        "commonUses": [
+            "Soul",
+            "Funk",
+            "Jazz fusion",
+            "Pop"
+        ],
+        "alternateNames": [
+            "Rhodes Piano",
+            "Tine Piano"
+        ],
+        "folder": "electric_piano_1-mp3"
+    },
+    {
+        "program": 5,
+        "name": "electric_piano_2",
+        "label": "Electric Piano 2",
+        "category": "Pianos & Keyboards",
+        "description": "A Yamaha CP-style electric piano with a brighter, more metallic tone. Popular in 1970s and 1980s music.",
+        "commonUses": [
+            "Funk",
+            "Disco",
+            "Rock",
+            "Pop ballads"
+        ],
+        "alternateNames": [
+            "CP Piano",
+            "Metallic Electric Piano"
+        ],
+        "folder": "electric_piano_2-mp3"
+    },
+    {
+        "program": 6,
+        "name": "harpsichord",
+        "label": "Harpsichord",
+        "category": "Pianos & Keyboards",
+        "description": "A plucked keyboard instrument from the Baroque era. Features bright, crisp articulation with minimal sustain.",
+        "commonUses": [
+            "Baroque music",
+            "Classical",
+            "Period pieces",
+            "Ornamental passages"
+        ],
+        "alternateNames": [
+            "Cembalo"
+        ],
+        "folder": "harpsichord-mp3"
+    },
+    {
+        "program": 7,
+        "name": "clavinet",
+        "label": "Clavinet",
+        "category": "Pianos & Keyboards",
+        "description": "An electric keyboard with percussive, clav-like tone. Often used with wah-wah effects in funk and rock music.",
+        "commonUses": [
+            "Funk",
+            "Soul",
+            "Rock",
+            "R&B"
+        ],
+        "alternateNames": [
+            "Clav",
+            "Clavichord"
+        ],
+        "folder": "clavinet-mp3"
+    },
+    {
+        "program": 8,
+        "name": "celesta",
+        "label": "Celesta",
+        "category": "Chromatic & Percussion",
+        "description": "A keyboard instrument with a delicate, bell-like tone. Produces ethereal, crystalline sounds perfect for magical or celestial effects.",
+        "commonUses": [
+            "Orchestral",
+            "Fantasy music",
+            "Magical effects",
+            "Christmas music"
+        ],
+        "alternateNames": [
+            "Celestial Bells"
+        ],
+        "folder": "celesta-mp3"
+    },
+    {
+        "program": 9,
+        "name": "glockenspiel",
+        "label": "Glockenspiel",
+        "category": "Chromatic & Percussion",
+        "description": "A percussion instrument with metal bars struck by mallets. Produces bright, shimmering tones similar to small bells.",
+        "commonUses": [
+            "Orchestral music",
+            "Children's music",
+            "Bright accents",
+            "Asian music"
+        ],
+        "alternateNames": [
+            "Bell Lyre",
+            "Metallophone"
+        ],
+        "folder": "glockenspiel-mp3"
+    },
+    {
+        "program": 10,
+        "name": "music_box",
+        "label": "Music Box",
+        "category": "Chromatic & Percussion",
+        "description": "A mechanical music box with a tinny, nostalgic sound. Features a gentle, whimsical character.",
+        "commonUses": [
+            "Nostalgic passages",
+            "Lullabies",
+            "Toy themes",
+            "Horror/suspense"
+        ],
+        "alternateNames": [
+            "Mechanical Music Box"
+        ],
+        "folder": "music_box-mp3"
+    },
+    {
+        "program": 11,
+        "name": "vibraphone",
+        "label": "Vibraphone",
+        "category": "Chromatic & Percussion",
+        "description": "A percussion instrument with metal bars and motorized vibraslats underneath. Creates a warm, pulsating tone with natural vibrato.",
+        "commonUses": [
+            "Jazz",
+            "Soul",
+            "Contemporary music",
+            "Laid-back passages"
+        ],
+        "alternateNames": [
+            "Vibes",
+            "Vibraharp"
+        ],
+        "folder": "vibraphone-mp3"
+    },
+    {
+        "program": 12,
+        "name": "marimba",
+        "label": "Marimba",
+        "category": "Chromatic & Percussion",
+        "description": "A wooden bar percussion instrument with resonators underneath. Features warm, mellow tones across a wide range.",
+        "commonUses": [
+            "Latin music",
+            "Jazz",
+            "Contemporary",
+            "Orchestral"
+        ],
+        "alternateNames": [
+            "Xylophone family"
+        ],
+        "folder": "marimba-mp3"
+    },
+    {
+        "program": 13,
+        "name": "xylophone",
+        "label": "Xylophone",
+        "category": "Chromatic & Percussion",
+        "description": "A wooden bar percussion instrument with a bright, dry tone. Similar to marimba but with less resonance.",
+        "commonUses": [
+            "Children's music",
+            "Asian music",
+            "Bright accents",
+            "Comedic effects"
+        ],
+        "alternateNames": [
+            "African Xylophone"
+        ],
+        "folder": "xylophone-mp3"
+    },
+    {
+        "program": 14,
+        "name": "tubular_bells",
+        "label": "Tubular Bells",
+        "category": "Chromatic & Percussion",
+        "description": "Tuned metal tubes struck by mallets. Creates clear, bell-like tones that ring and sustain. Famous from horror films.",
+        "commonUses": [
+            "Orchestral music",
+            "Dramatic moments",
+            "Classical",
+            "Film scores"
+        ],
+        "alternateNames": [
+            "Chimes",
+            "Orchestral Bells"
+        ],
+        "folder": "tubular_bells-mp3"
+    },
+    {
+        "program": 15,
+        "name": "dulcimer",
+        "label": "Dulcimer",
+        "category": "Chromatic & Percussion",
+        "description": "A stringed percussion instrument played with hammers. Produces sweet, gentle, resonant tones.",
+        "commonUses": [
+            "Folk music",
+            "Classical music",
+            "Gentle passages",
+            "World music"
+        ],
+        "alternateNames": [
+            "Zither",
+            "Hammer Dulcimer"
+        ],
+        "folder": "dulcimer-mp3"
+    },
+    {
+        "program": 16,
+        "name": "drawbar_organ",
+        "label": "Drawbar Organ",
+        "category": "Organs",
+        "description": "An electronic organ with drawbars controlling harmonic content. Classic B3-style organ with pipes and percussion controls.",
+        "commonUses": [
+            "Jazz",
+            "Soul",
+            "Rock",
+            "Gospel"
+        ],
+        "alternateNames": [
+            "Hammond Organ",
+            "B3 Organ"
+        ],
+        "folder": "drawbar_organ-mp3"
+    },
+    {
+        "program": 17,
+        "name": "percussive_organ",
+        "label": "Percussive Organ",
+        "category": "Organs",
+        "description": "An electronic organ with percussive attack and fast decay. Often used with treble registration for bright passages.",
+        "commonUses": [
+            "Funk",
+            "Rock",
+            "Soul",
+            "Upbeat passages"
+        ],
+        "alternateNames": [
+            "Attack Organ",
+            "Bright Organ"
+        ],
+        "folder": "percussive_organ-mp3"
+    },
+    {
+        "program": 18,
+        "name": "rock_organ",
+        "label": "Rock Organ",
+        "category": "Organs",
+        "description": "An organ with a driving, energetic character. Combines depth with percussive attack for powerful rock sound.",
+        "commonUses": [
+            "Rock music",
+            "Funk",
+            "Blues",
+            "Driving passages"
+        ],
+        "alternateNames": [
+            "Electric Organ"
+        ],
+        "folder": "rock_organ-mp3"
+    },
+    {
+        "program": 19,
+        "name": "church_organ",
+        "label": "Church Organ",
+        "category": "Organs",
+        "description": "A traditional pipe organ with full, majestic tones. Creates solemn, reverent, expansive soundscapes.",
+        "commonUses": [
+            "Religious music",
+            "Classical",
+            "Funeral marches",
+            "Dramatic passages"
+        ],
+        "alternateNames": [
+            "Pipe Organ",
+            "Cathedral Organ"
+        ],
+        "folder": "church_organ-mp3"
+    },
+    {
+        "program": 20,
+        "name": "reed_organ",
+        "label": "Reed Organ",
+        "category": "Organs",
+        "description": "A wind-driven keyboard instrument with reeds. Creates warm, vintage, slightly breathy tones.",
+        "commonUses": [
+            "Hymns",
+            "Folk music",
+            "Nostalgic passages",
+            "Country"
+        ],
+        "alternateNames": [
+            "Pump Organ",
+            "Harmonium"
+        ],
+        "folder": "reed_organ-mp3"
+    },
+    {
+        "program": 21,
+        "name": "accordion",
+        "label": "Accordion",
+        "category": "Accordions & Harmonicas",
+        "description": "A handheld bellows-driven keyboard. Produces warm, cheerful, slightly nasal tones associated with European folk music.",
+        "commonUses": [
+            "Polka",
+            "Folk music",
+            "Tango",
+            "European music"
+        ],
+        "alternateNames": [
+            "Button Accordion",
+            "Concertina"
+        ],
+        "folder": "accordion-mp3"
+    },
+    {
+        "program": 22,
+        "name": "harmonica",
+        "label": "Harmonica",
+        "category": "Accordions & Harmonicas",
+        "description": "A wind instrument with reeds. Produces warm, bluesy, expressive tones. Can be played with characteristic bends.",
+        "commonUses": [
+            "Blues",
+            "Folk",
+            "Country",
+            "Rock"
+        ],
+        "alternateNames": [
+            "Mouth Organ",
+            "Blues Harp"
+        ],
+        "folder": "harmonica-mp3"
+    },
+    {
+        "program": 23,
+        "name": "tango_accordion",
+        "label": "Tango Accordion",
+        "category": "Accordions & Harmonicas",
+        "description": "An accordion with a darker, moodier character. Features the passionate, sultry tone of traditional tango music.",
+        "commonUses": [
+            "Tango",
+            "Argentine music",
+            "Dramatic passages",
+            "Latin music"
+        ],
+        "alternateNames": [
+            "Bandoneon",
+            "Tango BandoneÃ³n"
+        ],
+        "folder": "tango_accordion-mp3"
+    },
+    {
+        "program": 24,
+        "name": "acoustic_guitar_nylon",
+        "label": "Acoustic Guitar - Nylon String",
+        "category": "Guitars",
+        "description": "A classical acoustic guitar with nylon strings. Produces warm, mellow, resonant tones with natural finger-picked character.",
+        "commonUses": [
+            "Classical music",
+            "Flamenco",
+            "Latin",
+            "Folk"
+        ],
+        "alternateNames": [
+            "Classical Guitar",
+            "Spanish Guitar"
+        ],
+        "folder": "acoustic_guitar_nylon-mp3"
+    },
+    {
+        "program": 25,
+        "name": "acoustic_guitar_steel",
+        "label": "Acoustic Guitar - Steel String",
+        "category": "Guitars",
+        "description": "An acoustic guitar with steel strings. Produces bright, punchy, cutting tones with pronounced attack.",
+        "commonUses": [
+            "Folk",
+            "Country",
+            "Pop",
+            "Singer-songwriter"
+        ],
+        "alternateNames": [
+            "Steel String Guitar",
+            "Folk Guitar"
+        ],
+        "folder": "acoustic_guitar_steel-mp3"
+    },
+    {
+        "program": 26,
+        "name": "electric_guitar_jazz",
+        "label": "Electric Guitar - Jazz",
+        "category": "Guitars",
+        "description": "A semi-hollow body electric guitar with warm, smooth tone. Perfect for jazz chords and solos.",
+        "commonUses": [
+            "Jazz",
+            "Blues",
+            "Soul",
+            "Smooth passages"
+        ],
+        "alternateNames": [
+            "Jazz Guitar",
+            "Semi-Acoustic Guitar"
+        ],
+        "folder": "electric_guitar_jazz-mp3"
+    },
+    {
+        "program": 27,
+        "name": "electric_guitar_clean",
+        "label": "Electric Guitar - Clean",
+        "category": "Guitars",
+        "description": "A solid-body electric guitar with clean, undistorted tone. Bright and versatile for various styles.",
+        "commonUses": [
+            "Pop",
+            "Rock",
+            "Funk",
+            "Alternative"
+        ],
+        "alternateNames": [
+            "Clean Guitar",
+            "Jangle Guitar"
+        ],
+        "folder": "electric_guitar_clean-mp3"
+    },
+    {
+        "program": 28,
+        "name": "electric_guitar_muted",
+        "label": "Electric Guitar - Muted",
+        "category": "Guitars",
+        "description": "An electric guitar with palm muting. Produces percussive, staccato tones used for rhythmic patterns.",
+        "commonUses": [
+            "Rock",
+            "Alternative",
+            "Metal",
+            "Funk rhythm"
+        ],
+        "alternateNames": [
+            "Palm Muted Guitar"
+        ],
+        "folder": "electric_guitar_muted-mp3"
+    },
+    {
+        "program": 29,
+        "name": "overdriven_guitar",
+        "label": "Overdriven Guitar",
+        "category": "Guitars",
+        "description": "An electric guitar with moderate distortion and sustain. Creates a warm, crunchy, driven sound.",
+        "commonUses": [
+            "Rock",
+            "Blues",
+            "Hard rock",
+            "Alternative"
+        ],
+        "alternateNames": [
+            "Driven Guitar",
+            "Warm Distortion"
+        ],
+        "folder": "overdriven_guitar-mp3"
+    },
+    {
+        "program": 30,
+        "name": "distortion_guitar",
+        "label": "Distortion Guitar",
+        "category": "Guitars",
+        "description": "An electric guitar with heavy distortion and maximum sustain. Creates a dense, aggressive, powerful tone.",
+        "commonUses": [
+            "Heavy metal",
+            "Hard rock",
+            "Punk",
+            "Aggressive passages"
+        ],
+        "alternateNames": [
+            "Heavy Distortion",
+            "Lead Guitar"
+        ],
+        "folder": "distortion_guitar-mp3"
+    },
+    {
+        "program": 31,
+        "name": "guitar_harmonics",
+        "label": "Guitar Harmonics",
+        "category": "Guitars",
+        "description": "Guitar with artificial harmonics played by touching the string while plucking. Produces crystalline, bell-like tones.",
+        "commonUses": [
+            "Ambient music",
+            "Metal solos",
+            "Ethereal passages",
+            "Special effects"
+        ],
+        "alternateNames": [
+            "Pinch Harmonics",
+            "Artificial Harmonics"
+        ],
+        "folder": "guitar_harmonics-mp3"
+    },
+    {
+        "program": 32,
+        "name": "acoustic_bass",
+        "label": "Acoustic Bass",
+        "category": "Bass",
+        "description": "A large acoustic bass with deep, resonant, woody tones. Features natural string vibration and warmth.",
+        "commonUses": [
+            "Jazz",
+            "Upright Bass parts",
+            "Folk",
+            "Classical"
+        ],
+        "alternateNames": [
+            "Upright Bass",
+            "Acoustic Double Bass"
+        ],
+        "folder": "acoustic_bass-mp3"
+    },
+    {
+        "program": 33,
+        "name": "electric_bass_finger",
+        "label": "Electric Bass - Finger",
+        "category": "Bass",
+        "description": "An electric bass played with fingers. Produces warm, punchy, articulate tones with organic attack.",
+        "commonUses": [
+            "Jazz",
+            "Funk",
+            "Soul",
+            "Progressive rock"
+        ],
+        "alternateNames": [
+            "Fingerstyle Bass",
+            "Fender Precision"
+        ],
+        "folder": "electric_bass_finger-mp3"
+    },
+    {
+        "program": 34,
+        "name": "electric_bass_pick",
+        "label": "Electric Bass - Pick",
+        "category": "Bass",
+        "description": "An electric bass played with a pick. Produces bright, snappy, aggressive tones with pronounced attack.",
+        "commonUses": [
+            "Rock",
+            "Punk",
+            "Pop",
+            "Metal"
+        ],
+        "alternateNames": [
+            "Picked Bass",
+            "Plectrum Bass"
+        ],
+        "folder": "electric_bass_pick-mp3"
+    },
+    {
+        "program": 35,
+        "name": "fretless_bass",
+        "label": "Fretless Bass",
+        "category": "Bass",
+        "description": "An electric bass without frets. Produces smooth, singing, expressive tones with slight pitch slides between notes.",
+        "commonUses": [
+            "Jazz fusion",
+            "Smooth jazz",
+            "Contemporary",
+            "Expressive passages"
+        ],
+        "alternateNames": [
+            "Fretless Electric Bass"
+        ],
+        "folder": "fretless_bass-mp3"
+    },
+    {
+        "program": 36,
+        "name": "slap_bass_1",
+        "label": "Slap Bass 1",
+        "category": "Bass",
+        "description": "An electric bass with percussive slap technique. First variety with growling, aggressive tone.",
+        "commonUses": [
+            "Funk",
+            "Soul",
+            "R&B",
+            "Pop"
+        ],
+        "alternateNames": [
+            "Funk Bass",
+            "Slap Bass Style 1"
+        ],
+        "folder": "slap_bass_1-mp3"
+    },
+    {
+        "program": 37,
+        "name": "slap_bass_2",
+        "label": "Slap Bass 2",
+        "category": "Bass",
+        "description": "An electric bass with percussive slap technique. Second variety with sharper, punchier tone.",
+        "commonUses": [
+            "Funk",
+            "Soul",
+            "R&B",
+            "Disco"
+        ],
+        "alternateNames": [
+            "Slap Bass Style 2"
+        ],
+        "folder": "slap_bass_2-mp3"
+    },
+    {
+        "program": 38,
+        "name": "synth_bass_1",
+        "label": "Synth Bass 1",
+        "category": "Bass",
+        "description": "A synthesizer bass with warm, round tone and analog character. Classic subtractive synthesis sound.",
+        "commonUses": [
+            "Electronic music",
+            "Funk",
+            "Electro",
+            "Dance"
+        ],
+        "alternateNames": [
+            "Analog Bass",
+            "Moog Bass"
+        ],
+        "folder": "synth_bass_1-mp3"
+    },
+    {
+        "program": 39,
+        "name": "synth_bass_2",
+        "label": "Synth Bass 2",
+        "category": "Bass",
+        "description": "A synthesizer bass with bright, punchy tone and strong envelope. More aggressive than Synth Bass 1.",
+        "commonUses": [
+            "Techno",
+            "House",
+            "Industrial",
+            "Electronic"
+        ],
+        "alternateNames": [
+            "Digital Bass",
+            "Bright Synth Bass"
+        ],
+        "folder": "synth_bass_2-mp3"
+    },
+    {
+        "program": 40,
+        "name": "violin",
+        "label": "Violin",
+        "category": "Strings",
+        "description": "A bowed string instrument with bright, expressive, soaring tones. Capable of great emotional depth and virtuosity.",
+        "commonUses": [
+            "Classical music",
+            "Film scores",
+            "Contemporary",
+            "Folk"
+        ],
+        "alternateNames": [
+            "Fiddle",
+            "Violino"
+        ],
+        "folder": "violin-mp3"
+    },
+    {
+        "program": 41,
+        "name": "viola",
+        "label": "Viola",
+        "category": "Strings",
+        "description": "A bowed string instrument slightly larger than violin. Produces warm, mellow, slightly nasal tones.",
+        "commonUses": [
+            "Classical music",
+            "Chamber music",
+            "Orchestral",
+            "Contemporary"
+        ],
+        "alternateNames": [
+            "Viola d'amore"
+        ],
+        "folder": "viola-mp3"
+    },
+    {
+        "program": 42,
+        "name": "cello",
+        "label": "Cello",
+        "category": "Strings",
+        "description": "A large bowed string instrument with deep, resonant, vocal-like tones. Rich and expressive across its range.",
+        "commonUses": [
+            "Classical music",
+            "Chamber music",
+            "Film scores",
+            "Contemporary"
+        ],
+        "alternateNames": [
+            "Violoncello"
+        ],
+        "folder": "cello-mp3"
+    },
+    {
+        "program": 43,
+        "name": "contrabass",
+        "label": "Contrabass",
+        "category": "Strings",
+        "description": "The largest bowed string instrument with deep, powerful, booming tones. Provides foundation for orchestral music.",
+        "commonUses": [
+            "Classical music",
+            "Orchestral",
+            "Jazz",
+            "Film scores"
+        ],
+        "alternateNames": [
+            "Double Bass",
+            "Upright Bass"
+        ],
+        "folder": "contrabass-mp3"
+    },
+    {
+        "program": 44,
+        "name": "tremolo_strings",
+        "label": "Tremolo Strings",
+        "category": "Strings",
+        "description": "String instruments played with rapid tremolo (quick repeating bow strokes). Creates shimmering, dramatic effect.",
+        "commonUses": [
+            "Orchestral music",
+            "Film scores",
+            "Dramatic passages",
+            "Horror"
+        ],
+        "alternateNames": [
+            "String Tremolo"
+        ],
+        "folder": "tremolo_strings-mp3"
+    },
+    {
+        "program": 45,
+        "name": "pizzicato_strings",
+        "label": "Pizzicato Strings",
+        "category": "Strings",
+        "description": "String instruments plucked instead of bowed. Produces percussive, staccato, rhythmic articulation.",
+        "commonUses": [
+            "Classical music",
+            "Contemporary",
+            "Comedic effects",
+            "Film scores"
+        ],
+        "alternateNames": [
+            "Plucked Strings"
+        ],
+        "folder": "pizzicato_strings-mp3"
+    },
+    {
+        "program": 46,
+        "name": "orchestral_harp",
+        "label": "Orchestral Harp",
+        "category": "Strings",
+        "description": "A large plucked string instrument played with fingers. Produces shimmering, glissando effects and melodic lines.",
+        "commonUses": [
+            "Classical music",
+            "Fantasy themes",
+            "Ethereal passages",
+            "Film scores"
+        ],
+        "alternateNames": [
+            "Concert Grand Harp"
+        ],
+        "folder": "orchestral_harp-mp3"
+    },
+    {
+        "program": 47,
+        "name": "timpani",
+        "label": "Timpani",
+        "category": "Strings",
+        "description": "Large tuned drums with a deep, resonant, booming character. Often used for dramatic impacts in orchestral music.",
+        "commonUses": [
+            "Classical music",
+            "Orchestral",
+            "Dramatic moments",
+            "Film scores"
+        ],
+        "alternateNames": [
+            "Kettle Drums"
+        ],
+        "folder": "timpani-mp3"
+    },
+    {
+        "program": 48,
+        "name": "string_ensemble_1",
+        "label": "String Ensemble 1",
+        "category": "Ensembles & Orchestra",
+        "description": "Multiple string instruments playing together. First variant with sustained, lush tone.",
+        "commonUses": [
+            "Orchestral music",
+            "Film scores",
+            "Romantic passages",
+            "Lush pads"
+        ],
+        "alternateNames": [
+            "String Section",
+            "Strings"
+        ],
+        "folder": "string_ensemble_1-mp3"
+    },
+    {
+        "program": 49,
+        "name": "string_ensemble_2",
+        "label": "String Ensemble 2",
+        "category": "Ensembles & Orchestra",
+        "description": "Multiple string instruments playing together. Second variant with brighter, more articulate tone.",
+        "commonUses": [
+            "Orchestral music",
+            "Film scores",
+            "Upbeat passages",
+            "Bright passages"
+        ],
+        "alternateNames": [
+            "Bright Strings"
+        ],
+        "folder": "string_ensemble_2-mp3"
+    },
+    {
+        "program": 50,
+        "name": "synth_strings_1",
+        "label": "Synth Strings 1",
+        "category": "Ensembles & Orchestra",
+        "description": "Synthesized string sounds with warm, thick character. First variant with a more analog feel.",
+        "commonUses": [
+            "Ambient music",
+            "Electronic music",
+            "Sci-fi",
+            "Pads"
+        ],
+        "alternateNames": [
+            "Synthesized Strings"
+        ],
+        "folder": "synth_strings_1-mp3"
+    },
+    {
+        "program": 51,
+        "name": "synth_strings_2",
+        "label": "Synth Strings 2",
+        "category": "Ensembles & Orchestra",
+        "description": "Synthesized string sounds with bright, modern character. Second variant with a more digital feel.",
+        "commonUses": [
+            "Electronic music",
+            "Synthwave",
+            "Techno",
+            "New Age"
+        ],
+        "alternateNames": [
+            "Digital Synth Strings"
+        ],
+        "folder": "synth_strings_2-mp3"
+    },
+    {
+        "program": 52,
+        "name": "choir_aahs",
+        "label": "Choir - Aahs",
+        "category": "Ensembles & Orchestra",
+        "description": "A vocal choir singing 'ahh' vowels. Produces warm, rich, unified vocal harmonies.",
+        "commonUses": [
+            "Orchestral music",
+            "Film scores",
+            "Religious music",
+            "Choral arrangements"
+        ],
+        "alternateNames": [
+            "Choir A",
+            "Vocal Ahh"
+        ],
+        "folder": "choir_aahs-mp3"
+    },
+    {
+        "program": 53,
+        "name": "voice_oohs",
+        "label": "Voice - Oohs",
+        "category": "Ensembles & Orchestra",
+        "description": "Vocal voices singing 'ooh' vowels. Produces warm, hollow, resonant vocal character.",
+        "commonUses": [
+            "Orchestral music",
+            "Film scores",
+            "Ethereal effects",
+            "Vocal arrangements"
+        ],
+        "alternateNames": [
+            "Vocal Ooh"
+        ],
+        "folder": "voice_oohs-mp3"
+    },
+    {
+        "program": 54,
+        "name": "synth_choir",
+        "label": "Synth Choir",
+        "category": "Ensembles & Orchestra",
+        "description": "Synthesized vocal sounds layered to create a choir effect. Produces ethereal, otherworldly vocal character.",
+        "commonUses": [
+            "Ambient music",
+            "Sci-fi",
+            "Electronic music",
+            "Angelic effects"
+        ],
+        "alternateNames": [
+            "Synthesized Choir",
+            "Vocoder Choir"
+        ],
+        "folder": "synth_choir-mp3"
+    },
+    {
+        "program": 55,
+        "name": "orchestra_hit",
+        "label": "Orchestra Hit",
+        "category": "Ensembles & Orchestra",
+        "description": "A stab of the entire orchestra hitting a chord simultaneously. Creates dramatic, impactful punctuation.",
+        "commonUses": [
+            "Orchestral music",
+            "Film scores",
+            "Dramatic moments",
+            "Comedic timing"
+        ],
+        "alternateNames": [
+            "Stab",
+            "Tutti"
+        ],
+        "folder": "orchestra_hit-mp3"
+    },
+    {
+        "program": 56,
+        "name": "trumpet",
+        "label": "Trumpet",
+        "category": "Brass",
+        "description": "A brass instrument with bright, brilliant tone and piercing presence. Capable of great agility and expression.",
+        "commonUses": [
+            "Jazz",
+            "Classical music",
+            "Film scores",
+            "Fanfares"
+        ],
+        "alternateNames": [
+            "Trumpet"
+        ],
+        "folder": "trumpet-mp3"
+    },
+    {
+        "program": 57,
+        "name": "trombone",
+        "label": "Trombone",
+        "category": "Brass",
+        "description": "A brass instrument with warm, mellow tone and slide ability for expressive slides. Deeper than trumpet.",
+        "commonUses": [
+            "Jazz",
+            "Classical music",
+            "Funk",
+            "Soul"
+        ],
+        "alternateNames": [
+            "Slide Trombone"
+        ],
+        "folder": "trombone-mp3"
+    },
+    {
+        "program": 58,
+        "name": "tuba",
+        "label": "Tuba",
+        "category": "Brass",
+        "description": "The largest brass instrument with deep, powerful, booming tone. Provides bass foundation for brass section.",
+        "commonUses": [
+            "Orchestral music",
+            "Classical music",
+            "Concert band",
+            "Jazz"
+        ],
+        "alternateNames": [
+            "Bass Tuba"
+        ],
+        "folder": "tuba-mp3"
+    },
+    {
+        "program": 59,
+        "name": "muted_trumpet",
+        "label": "Muted Trumpet",
+        "category": "Brass",
+        "description": "A trumpet with a mute inserted in the bell. Produces softer, more nasal, intimate tone.",
+        "commonUses": [
+            "Jazz",
+            "Film scores",
+            "Intimate passages",
+            "Blues"
+        ],
+        "alternateNames": [
+            "Plunger Trumpet",
+            "Wah-wah Trumpet"
+        ],
+        "folder": "muted_trumpet-mp3"
+    },
+    {
+        "program": 60,
+        "name": "french_horn",
+        "label": "French Horn",
+        "category": "Brass",
+        "description": "A brass instrument with warm, mellow, slightly nasal tone. Versatile and can play soft or brassy.",
+        "commonUses": [
+            "Classical music",
+            "Orchestral",
+            "Film scores",
+            "Romantic passages"
+        ],
+        "alternateNames": [
+            "Horn"
+        ],
+        "folder": "french_horn-mp3"
+    },
+    {
+        "program": 61,
+        "name": "brass_section",
+        "label": "Brass Section",
+        "category": "Brass",
+        "description": "Multiple brass instruments playing together. Creates bright, powerful, unified brass tone.",
+        "commonUses": [
+            "Jazz",
+            "Soul",
+            "Funk",
+            "Orchestra"
+        ],
+        "alternateNames": [
+            "Brass Stab",
+            "Brass Ensemble"
+        ],
+        "folder": "brass_section-mp3"
+    },
+    {
+        "program": 62,
+        "name": "synth_brass_1",
+        "label": "Synth Brass 1",
+        "category": "Brass",
+        "description": "Synthesized brass sounds with warm, thick character. First variant with more analog feel.",
+        "commonUses": [
+            "Electronic music",
+            "Synthwave",
+            "Sci-fi",
+            "Pads"
+        ],
+        "alternateNames": [
+            "Synth Brass"
+        ],
+        "folder": "synth_brass_1-mp3"
+    },
+    {
+        "program": 63,
+        "name": "synth_brass_2",
+        "label": "Synth Brass 2",
+        "category": "Brass",
+        "description": "Synthesized brass sounds with bright, cutting character. Second variant with more digital feel.",
+        "commonUses": [
+            "Electronic music",
+            "Techno",
+            "House",
+            "Aggressive stabs"
+        ],
+        "alternateNames": [
+            "Bright Synth Brass"
+        ],
+        "folder": "synth_brass_2-mp3"
+    },
+    {
+        "program": 64,
+        "name": "soprano_sax",
+        "label": "Soprano Saxophone",
+        "category": "Saxophones & Woodwinds",
+        "description": "The smallest and highest saxophone with bright, piercing, soaring tone. Often heard in smooth jazz.",
+        "commonUses": [
+            "Jazz",
+            "Smooth jazz",
+            "Pop",
+            "Solos"
+        ],
+        "alternateNames": [
+            "Soprano Sax"
+        ],
+        "folder": "soprano_sax-mp3"
+    },
+    {
+        "program": 65,
+        "name": "alto_sax",
+        "label": "Alto Saxophone",
+        "category": "Saxophones & Woodwinds",
+        "description": "A medium saxophone with warm, woody tone. The most popular saxophone for jazz and classical pieces.",
+        "commonUses": [
+            "Jazz",
+            "Classical",
+            "Pop",
+            "Soul"
+        ],
+        "alternateNames": [
+            "Alto Sax"
+        ],
+        "folder": "alto_sax-mp3"
+    },
+    {
+        "program": 66,
+        "name": "tenor_sax",
+        "label": "Tenor Saxophone",
+        "category": "Saxophones & Woodwinds",
+        "description": "A larger saxophone with warm, mellow, deep tone. Rich and expressive tone often heard in jazz ballads.",
+        "commonUses": [
+            "Jazz",
+            "Blues",
+            "Soul",
+            "Pop"
+        ],
+        "alternateNames": [
+            "Tenor Sax"
+        ],
+        "folder": "tenor_sax-mp3"
+    },
+    {
+        "program": 67,
+        "name": "baritone_sax",
+        "label": "Baritone Saxophone",
+        "category": "Saxophones & Woodwinds",
+        "description": "The largest and lowest saxophone with deep, powerful, rich tone. Provides bass for saxophone section.",
+        "commonUses": [
+            "Jazz",
+            "Classical",
+            "Rock",
+            "Orchestral"
+        ],
+        "alternateNames": [
+            "Baritone Sax"
+        ],
+        "folder": "baritone_sax-mp3"
+    },
+    {
+        "program": 68,
+        "name": "oboe",
+        "label": "Oboe",
+        "category": "Saxophones & Woodwinds",
+        "description": "A double-reed woodwind instrument with distinctive, nasal, penetrating tone. Often used for solos.",
+        "commonUses": [
+            "Classical music",
+            "Orchestral",
+            "Contemporary",
+            "Film scores"
+        ],
+        "alternateNames": [
+            "Oboe d'amore"
+        ],
+        "folder": "oboe-mp3"
+    },
+    {
+        "program": 69,
+        "name": "english_horn",
+        "label": "English Horn",
+        "category": "Saxophones & Woodwinds",
+        "description": "A larger oboe with warm, mellow, slightly nasal tone. Produces lyrical, expressive sounds.",
+        "commonUses": [
+            "Classical music",
+            "Orchestral",
+            "Film scores",
+            "Pastoral passages"
+        ],
+        "alternateNames": [
+            "Cor Anglais"
+        ],
+        "folder": "english_horn-mp3"
+    },
+    {
+        "program": 70,
+        "name": "bassoon",
+        "label": "Bassoon",
+        "category": "Saxophones & Woodwinds",
+        "description": "A double-reed woodwind with deep, woody, resonant tone. Capable of both lyrical and comedic sounds.",
+        "commonUses": [
+            "Classical music",
+            "Orchestral",
+            "Comedic effects",
+            "Film scores"
+        ],
+        "alternateNames": [
+            "Fagott"
+        ],
+        "folder": "bassoon-mp3"
+    },
+    {
+        "program": 71,
+        "name": "clarinet",
+        "label": "Clarinet",
+        "category": "Saxophones & Woodwinds",
+        "description": "A single-reed woodwind with warm, mellow tone in low register and bright tone in high register.",
+        "commonUses": [
+            "Classical music",
+            "Jazz",
+            "Folk",
+            "Orchestral"
+        ],
+        "alternateNames": [
+            "B Flat Clarinet"
+        ],
+        "folder": "clarinet-mp3"
+    },
+    {
+        "program": 72,
+        "name": "piccolo",
+        "label": "Piccolo",
+        "category": "Saxophones & Woodwinds",
+        "description": "A small, high-pitched flute with bright, shrill, piercing tone. Carries melody in the highest register.",
+        "commonUses": [
+            "Classical music",
+            "Orchestral",
+            "Military music",
+            "Bright passages"
+        ],
+        "alternateNames": [
+            "Fife"
+        ],
+        "folder": "piccolo-mp3"
+    },
+    {
+        "program": 73,
+        "name": "flute",
+        "label": "Flute",
+        "category": "Saxophones & Woodwinds",
+        "description": "A wind instrument with bright, warm, breathy tone across its wide range. Capable of great agility.",
+        "commonUses": [
+            "Classical music",
+            "Jazz",
+            "Film scores",
+            "Solos"
+        ],
+        "alternateNames": [
+            "Traverse Flute"
+        ],
+        "folder": "flute-mp3"
+    },
+    {
+        "program": 74,
+        "name": "recorder",
+        "label": "Recorder",
+        "category": "Saxophones & Woodwinds",
+        "description": "A simple wind instrument with warm, woody, slightly sweet tone. Produces nasal quality in high register.",
+        "commonUses": [
+            "Renaissance music",
+            "Baroque music",
+            "Folk",
+            "Children's music"
+        ],
+        "alternateNames": [
+            "Tin Whistle"
+        ],
+        "folder": "recorder-mp3"
+    },
+    {
+        "program": 75,
+        "name": "pan_flute",
+        "label": "Pan Flute",
+        "category": "Saxophones & Woodwinds",
+        "description": "An ancient wind instrument made of reeds of different lengths. Produces warm, earthy, sweet tone.",
+        "commonUses": [
+            "World music",
+            "Pan pipes solos",
+            "Romantic passages",
+            "Exotic effects"
+        ],
+        "alternateNames": [
+            "Panpipes",
+            "Syrinx"
+        ],
+        "folder": "pan_flute-mp3"
+    },
+    {
+        "program": 76,
+        "name": "blown_bottle",
+        "label": "Blown Bottle",
+        "category": "Saxophones & Woodwinds",
+        "description": "A wind instrument mimicking the sound of blowing across a bottle. Produces hollow, mysterious tone.",
+        "commonUses": [
+            "World music",
+            "Ambient passages",
+            "Exotic effects",
+            "Folk"
+        ],
+        "alternateNames": [
+            "Bottle Flute"
+        ],
+        "folder": "blown_bottle-mp3"
+    },
+    {
+        "program": 77,
+        "name": "shakuhachi",
+        "label": "Shakuhachi",
+        "category": "Saxophones & Woodwinds",
+        "description": "A Japanese bamboo end-blown flute with soft, meditative, breathy tone. Often associated with Zen music.",
+        "commonUses": [
+            "Japanese music",
+            "World music",
+            "Ambient passages",
+            "Meditation"
+        ],
+        "alternateNames": [
+            "Bamboo Flute"
+        ],
+        "folder": "shakuhachi-mp3"
+    },
+    {
+        "program": 78,
+        "name": "whistle",
+        "label": "Whistle",
+        "category": "Saxophones & Woodwinds",
+        "description": "A simple wind instrument with bright, piercing tone. Produces high, clear, whistled notes.",
+        "commonUses": [
+            "Folk music",
+            "Bright passages",
+            "Comedic effects",
+            "Transverse"
+        ],
+        "alternateNames": [
+            "Tin Whistle",
+            "Pennywhistle"
+        ],
+        "folder": "whistle-mp3"
+    },
+    {
+        "program": 79,
+        "name": "ocarina",
+        "label": "Ocarina",
+        "category": "Saxophones & Woodwinds",
+        "description": "A small wind instrument with warm, hollow, slightly nasal tone. Produces gentle, musical tones.",
+        "commonUses": [
+            "World music",
+            "Folk music",
+            "Gentle passages",
+            "Ambient"
+        ],
+        "alternateNames": [
+            "Sweet Potato Flute"
+        ],
+        "folder": "ocarina-mp3"
+    },
+    {
+        "program": 80,
+        "name": "lead_1_square",
+        "label": "Lead 1 - Square Wave",
+        "category": "Synthesizer Leads",
+        "description": "A synthesized square wave with sharp, electronic tone and clear attack. Classic synthesizer sound.",
+        "commonUses": [
+            "Electronic music",
+            "Video game music",
+            "Synthwave",
+            "Sci-fi"
+        ],
+        "alternateNames": [
+            "Square Lead"
+        ],
+        "folder": "lead_1_square-mp3"
+    },
+    {
+        "program": 81,
+        "name": "lead_2_sawtooth",
+        "label": "Lead 2 - Sawtooth Wave",
+        "category": "Synthesizer Leads",
+        "description": "A synthesized sawtooth wave with bright, cutting tone full of harmonics. Characteristic analog sound.",
+        "commonUses": [
+            "Electronic music",
+            "Synthwave",
+            "Progressive",
+            "Aggressive leads"
+        ],
+        "alternateNames": [
+            "Sawtooth Lead"
+        ],
+        "folder": "lead_2_sawtooth-mp3"
+    },
+    {
+        "program": 82,
+        "name": "lead_3_calliope",
+        "label": "Lead 3 - Calliope",
+        "category": "Synthesizer Leads",
+        "description": "A synthesized lead mimicking the carnival organ (calliope) with sweet, whimsical tone.",
+        "commonUses": [
+            "Carnival music",
+            "Whimsical passages",
+            "Retro sounds",
+            "Novelty"
+        ],
+        "alternateNames": [
+            "Calliope Lead"
+        ],
+        "folder": "lead_3_calliope-mp3"
+    },
+    {
+        "program": 83,
+        "name": "lead_4_chiff",
+        "label": "Lead 4 - Chiff",
+        "category": "Synthesizer Leads",
+        "description": "A synthesized lead with a 'chiff' attack (like a flute attack) followed by a pure sine wave.",
+        "commonUses": [
+            "Atmospheric leads",
+            "Flute-like passages",
+            "Smooth leads",
+            "Melodic"
+        ],
+        "alternateNames": [
+            "Chiff Lead"
+        ],
+        "folder": "lead_4_chiff-mp3"
+    },
+    {
+        "program": 84,
+        "name": "lead_5_charang",
+        "label": "Lead 5 - Charang",
+        "category": "Synthesizer Leads",
+        "description": "A synthesized lead with distorted, gritty tone and bite. Named after the Indian sitar-like instrument.",
+        "commonUses": [
+            "Rock synthesis",
+            "Aggressive leads",
+            "Distorted passages",
+            "Hard rock"
+        ],
+        "alternateNames": [
+            "Charang Lead"
+        ],
+        "folder": "lead_5_charang-mp3"
+    },
+    {
+        "program": 85,
+        "name": "lead_6_voice",
+        "label": "Lead 6 - Voice",
+        "category": "Synthesizer Leads",
+        "description": "A synthesized lead with vocal-like characteristics. Produces warm, expressive, human-like tones.",
+        "commonUses": [
+            "Ambient music",
+            "Emotional leads",
+            "Vocal synthesis",
+            "Soft passages"
+        ],
+        "alternateNames": [
+            "Vocal Lead"
+        ],
+        "folder": "lead_6_voice-mp3"
+    },
+    {
+        "program": 86,
+        "name": "lead_7_fifths",
+        "label": "Lead 7 - Fifths",
+        "category": "Synthesizer Leads",
+        "description": "A synthesized lead using square wave with a fifth interval, creating a hollow, resonant tone.",
+        "commonUses": [
+            "Electronic music",
+            "Ambient leads",
+            "Sci-fi effects",
+            "Space sounds"
+        ],
+        "alternateNames": [
+            "Fifth Lead"
+        ],
+        "folder": "lead_7_fifths-mp3"
+    },
+    {
+        "program": 87,
+        "name": "lead_8_bass__lead",
+        "label": "Lead 8 - Bass+Lead",
+        "category": "Synthesizer Leads",
+        "description": "A dual synthesized sound combining bass and lead elements. Creates thick, prominent lead tone.",
+        "commonUses": [
+            "Electronic music",
+            "Techno",
+            "House",
+            "Heavy leads"
+        ],
+        "alternateNames": [
+            "Bass Lead"
+        ],
+        "folder": "lead_8_bass__lead-mp3"
+    },
+    {
+        "program": 88,
+        "name": "pad_1_new_age",
+        "label": "Pad 1 - New Age",
+        "category": "Synthesizer Pads",
+        "description": "A synthesized pad with soft, spacious, ethereal character. Creates dreamy, meditative atmosphere.",
+        "commonUses": [
+            "Ambient music",
+            "New Age",
+            "Meditation",
+            "Atmospheric pads"
+        ],
+        "alternateNames": [
+            "New Age Pad"
+        ],
+        "folder": "pad_1_new_age-mp3"
+    },
+    {
+        "program": 89,
+        "name": "pad_2_warm",
+        "label": "Pad 2 - Warm",
+        "category": "Synthesizer Pads",
+        "description": "A synthesized pad with warm, rich, full tone. Creates soft, enveloping atmosphere.",
+        "commonUses": [
+            "Ambient music",
+            "Emotional passages",
+            "Lush pads",
+            "Background texture"
+        ],
+        "alternateNames": [
+            "Warm Pad"
+        ],
+        "folder": "pad_2_warm-mp3"
+    },
+    {
+        "program": 90,
+        "name": "pad_3_polysynth",
+        "label": "Pad 3 - Polysynth",
+        "category": "Synthesizer Pads",
+        "description": "A synthesized pad with bright, shimmering character from multiple oscillators. Creates thick, full texture.",
+        "commonUses": [
+            "Electronic music",
+            "Ambient",
+            "Synthwave",
+            "Lush backgrounds"
+        ],
+        "alternateNames": [
+            "Poly Synth Pad"
+        ],
+        "folder": "pad_3_polysynth-mp3"
+    },
+    {
+        "program": 91,
+        "name": "pad_4_choir",
+        "label": "Pad 4 - Choir",
+        "category": "Synthesizer Pads",
+        "description": "A synthesized pad with vocal-like character mimicking a choir. Creates warm, human-like texture.",
+        "commonUses": [
+            "Ambient music",
+            "Orchestral synthesis",
+            "Angelic effects",
+            "Vocal pads"
+        ],
+        "alternateNames": [
+            "Choir Pad"
+        ],
+        "folder": "pad_4_choir-mp3"
+    },
+    {
+        "program": 92,
+        "name": "pad_5_bowed",
+        "label": "Pad 5 - Bowed",
+        "category": "Synthesizer Pads",
+        "description": "A synthesized pad mimicking sustained, bowed string instruments. Creates smooth, continuous texture.",
+        "commonUses": [
+            "Ambient music",
+            "Film scores",
+            "String synthesis",
+            "Sustained pads"
+        ],
+        "alternateNames": [
+            "Bowed Pad"
+        ],
+        "folder": "pad_5_bowed-mp3"
+    },
+    {
+        "program": 93,
+        "name": "pad_6_metallic",
+        "label": "Pad 6 - Metallic",
+        "category": "Synthesizer Pads",
+        "description": "A synthesized pad with bright, metallic, shimmering character. Creates ethereal, bell-like texture.",
+        "commonUses": [
+            "Ambient music",
+            "Sci-fi",
+            "Fantasy",
+            "Mysterious passages"
+        ],
+        "alternateNames": [
+            "Metallic Pad"
+        ],
+        "folder": "pad_6_metallic-mp3"
+    },
+    {
+        "program": 94,
+        "name": "pad_7_halo",
+        "label": "Pad 7 - Halo",
+        "category": "Synthesizer Pads",
+        "description": "A synthesized pad with floating, angelic, ethereal character. Creates heavenly, serene atmosphere.",
+        "commonUses": [
+            "Ambient music",
+            "Spiritual passages",
+            "Angelic effects",
+            "Heavenly sounds"
+        ],
+        "alternateNames": [
+            "Halo Pad"
+        ],
+        "folder": "pad_7_halo-mp3"
+    },
+    {
+        "program": 95,
+        "name": "pad_8_sweep",
+        "label": "Pad 8 - Sweep",
+        "category": "Synthesizer Pads",
+        "description": "A synthesized pad with a sweeping, evolving character. Creates dynamic, shifting atmosphere.",
+        "commonUses": [
+            "Ambient music",
+            "Transitions",
+            "Sci-fi",
+            "Cinematic pads"
+        ],
+        "alternateNames": [
+            "Sweep Pad"
+        ],
+        "folder": "pad_8_sweep-mp3"
+    },
+    {
+        "program": 96,
+        "name": "fx_1_rain",
+        "label": "FX 1 - Rain",
+        "category": "Sound Effects",
+        "description": "A sound effect mimicking falling rain with soft, ambient, naturalistic character.",
+        "commonUses": [
+            "Ambient music",
+            "Nature sounds",
+            "Weather effects",
+            "Atmospheric padding"
+        ],
+        "alternateNames": [
+            "Rain Effect"
+        ],
+        "folder": "fx_1_rain-mp3"
+    },
+    {
+        "program": 97,
+        "name": "fx_2_soundtrack",
+        "label": "FX 2 - Soundtrack",
+        "category": "Sound Effects",
+        "description": "A cinematic sound effect with dramatic, orchestral character. Creates dynamic transitions.",
+        "commonUses": [
+            "Film scores",
+            "Dramatic transitions",
+            "Cinematic effects",
+            "Impact"
+        ],
+        "alternateNames": [
+            "Cinematic FX"
+        ],
+        "folder": "fx_2_soundtrack-mp3"
+    },
+    {
+        "program": 98,
+        "name": "fx_3_crystal",
+        "label": "FX 3 - Crystal",
+        "category": "Sound Effects",
+        "description": "A sound effect with bright, shimmering, crystalline character. Creates ethereal, magical effect.",
+        "commonUses": [
+            "Magical effects",
+            "Ethereal passages",
+            "Sci-fi",
+            "Fantasy"
+        ],
+        "alternateNames": [
+            "Crystal Effect"
+        ],
+        "folder": "fx_3_crystal-mp3"
+    },
+    {
+        "program": 99,
+        "name": "fx_4_atmosphere",
+        "label": "FX 4 - Atmosphere",
+        "category": "Sound Effects",
+        "description": "An ambient sound effect creating atmospheric, spacious, ethereal texture.",
+        "commonUses": [
+            "Ambient music",
+            "Background texture",
+            "Atmospheric padding",
+            "Sci-fi"
+        ],
+        "alternateNames": [
+            "Atmosphere Effect"
+        ],
+        "folder": "fx_4_atmosphere-mp3"
+    },
+    {
+        "program": 100,
+        "name": "fx_5_brightness",
+        "label": "FX 5 - Brightness",
+        "category": "Sound Effects",
+        "description": "A bright, shiny sound effect creating uplifting, positive character.",
+        "commonUses": [
+            "Upbeat passages",
+            "Positive effects",
+            "Transitions",
+            "Bright moments"
+        ],
+        "alternateNames": [
+            "Bright FX"
+        ],
+        "folder": "fx_5_brightness-mp3"
+    },
+    {
+        "program": 101,
+        "name": "fx_6_goblins",
+        "label": "FX 6 - Goblins",
+        "category": "Sound Effects",
+        "description": "A creepy, mischievous sound effect evoking fantasy goblins. Creates eerie, chaotic character.",
+        "commonUses": [
+            "Fantasy games",
+            "Spooky passages",
+            "Comedic villains",
+            "Horror"
+        ],
+        "alternateNames": [
+            "Goblin Effect"
+        ],
+        "folder": "fx_6_goblins-mp3"
+    },
+    {
+        "program": 102,
+        "name": "fx_7_echoes",
+        "label": "FX 7 - Echoes",
+        "category": "Sound Effects",
+        "description": "A reverberant sound effect with repeated echoes. Creates spacious, distant, hollow character.",
+        "commonUses": [
+            "Reverb effects",
+            "Spacious passages",
+            "Cave effects",
+            "Cinematic"
+        ],
+        "alternateNames": [
+            "Echo Effect"
+        ],
+        "folder": "fx_7_echoes-mp3"
+    },
+    {
+        "program": 103,
+        "name": "fx_8_scifi",
+        "label": "FX 8 - Sci-Fi",
+        "category": "Sound Effects",
+        "description": "A futuristic sound effect with electronic, otherworldly character. Creates sci-fi atmosphere.",
+        "commonUses": [
+            "Sci-fi games",
+            "Science fiction",
+            "Futuristic passages",
+            "Alien effects"
+        ],
+        "alternateNames": [
+            "Sci-Fi Effect"
+        ],
+        "folder": "fx_8_scifi-mp3"
+    },
+    {
+        "program": 104,
+        "name": "sitar",
+        "label": "Sitar",
+        "category": "Ethnic & World Instruments",
+        "description": "An Indian string instrument with distinctive twangy, metallic tone. Capable of characteristic bends and slides.",
+        "commonUses": [
+            "Indian classical music",
+            "World music",
+            "Exotic passages",
+            "Fusion"
+        ],
+        "alternateNames": [
+            "Sitara"
+        ],
+        "folder": "sitar-mp3"
+    },
+    {
+        "program": 105,
+        "name": "banjo",
+        "label": "Banjo",
+        "category": "Ethnic & World Instruments",
+        "description": "A stringed percussion instrument with bright, percussive, twangy tone. Associated with folk and bluegrass.",
+        "commonUses": [
+            "Bluegrass",
+            "Folk",
+            "Country",
+            "Humorous passages"
+        ],
+        "alternateNames": [
+            "5-String Banjo"
+        ],
+        "folder": "banjo-mp3"
+    },
+    {
+        "program": 106,
+        "name": "shamisen",
+        "label": "Shamisen",
+        "category": "Ethnic & World Instruments",
+        "description": "A Japanese string instrument with three strings and sharp, percussive tone. Often used in traditional Japanese music.",
+        "commonUses": [
+            "Japanese music",
+            "Traditional Japanese",
+            "World music",
+            "Kabuki"
+        ],
+        "alternateNames": [
+            "Samisen"
+        ],
+        "folder": "shamisen-mp3"
+    },
+    {
+        "program": 107,
+        "name": "koto",
+        "label": "Koto",
+        "category": "Ethnic & World Instruments",
+        "description": "A Japanese plucked string instrument with ethereal, warm tone. Creates gentle, flowing melodies.",
+        "commonUses": [
+            "Japanese music",
+            "Traditional Japanese",
+            "World music",
+            "Ambient"
+        ],
+        "alternateNames": [
+            "Japanese Harp"
+        ],
+        "folder": "koto-mp3"
+    },
+    {
+        "program": 108,
+        "name": "kalimba",
+        "label": "Kalimba",
+        "category": "Ethnic & World Instruments",
+        "description": "An African thumb piano with warm, mellow, resonant tone. Produces gentle, meditative character.",
+        "commonUses": [
+            "African music",
+            "World music",
+            "Ambient passages",
+            "Meditation"
+        ],
+        "alternateNames": [
+            "Thumb Piano",
+            "Mbira"
+        ],
+        "folder": "kalimba-mp3"
+    },
+    {
+        "program": 109,
+        "name": "bagpipe",
+        "label": "Bagpipe",
+        "category": "Ethnic & World Instruments",
+        "description": "A wind instrument from Scotland and other regions with distinctive droning, nasal tone.",
+        "commonUses": [
+            "Scottish music",
+            "Celtic music",
+            "Folk",
+            "Traditional"
+        ],
+        "alternateNames": [
+            "Scottish Pipes"
+        ],
+        "folder": "bagpipe-mp3"
+    },
+    {
+        "program": 110,
+        "name": "fiddle",
+        "label": "Fiddle",
+        "category": "Ethnic & World Instruments",
+        "description": "A bowed string instrument similar to violin but played in folk styles. Produces energetic, earthy tone.",
+        "commonUses": [
+            "Folk music",
+            "Celtic",
+            "Bluegrass",
+            "Country"
+        ],
+        "alternateNames": [
+            "Folk Violin"
+        ],
+        "folder": "fiddle-mp3"
+    },
+    {
+        "program": 111,
+        "name": "shanai",
+        "label": "Shanai",
+        "category": "Ethnic & World Instruments",
+        "description": "An Indian double-reed wind instrument with loud, bright, penetrating tone. Associated with weddings.",
+        "commonUses": [
+            "Indian classical music",
+            "World music",
+            "Indian traditions",
+            "Festive"
+        ],
+        "alternateNames": [
+            "Shnai",
+            "Shahnai"
+        ],
+        "folder": "shanai-mp3"
+    },
+    {
+        "program": 112,
+        "name": "tinkle_bell",
+        "label": "Tinkle Bell",
+        "category": "Percussion & Effects",
+        "description": "Small bells creating bright, delicate, shimmering tones. Often used for ornamental passages.",
+        "commonUses": [
+            "Ornamental passages",
+            "Christmas music",
+            "Magical effects",
+            "Light moments"
+        ],
+        "alternateNames": [
+            "Small Bells",
+            "Jingle Bells"
+        ],
+        "folder": "tinkle_bell-mp3"
+    },
+    {
+        "program": 113,
+        "name": "agogo",
+        "label": "Agogo",
+        "category": "Percussion & Effects",
+        "description": "A Brazilian hand percussion with two metal bells of different pitches. Produces bright, percussive tone.",
+        "commonUses": [
+            "Brazilian music",
+            "Samba",
+            "Latin percussion",
+            "Rhythmic accents"
+        ],
+        "alternateNames": [
+            "Agogo Bells"
+        ],
+        "folder": "agogo-mp3"
+    },
+    {
+        "program": 114,
+        "name": "steel_drums",
+        "label": "Steel Drums",
+        "category": "Percussion & Effects",
+        "description": "Drums made from steel barrels with warm, resonant, tropical tone. Associated with Caribbean music.",
+        "commonUses": [
+            "Calypso",
+            "Caribbean",
+            "Reggae",
+            "Island music"
+        ],
+        "alternateNames": [
+            "Steel Pan",
+            "Steelpan"
+        ],
+        "folder": "steel_drums-mp3"
+    },
+    {
+        "program": 115,
+        "name": "woodblock",
+        "label": "Woodblock",
+        "category": "Percussion & Effects",
+        "description": "A wooden percussion instrument with dry, percussive, sharp tone. Often used for rhythm and effects.",
+        "commonUses": [
+            "Rhythm patterns",
+            "Percussive effects",
+            "Samba",
+            "Latin percussion"
+        ],
+        "alternateNames": [
+            "Temple Block",
+            "Tone Block"
+        ],
+        "folder": "woodblock-mp3"
+    },
+    {
+        "program": 116,
+        "name": "taiko_drum",
+        "label": "Taiko Drum",
+        "category": "Percussion & Effects",
+        "description": "A large Japanese drum with deep, powerful, booming tone. Creates intense, dramatic impacts.",
+        "commonUses": [
+            "Japanese music",
+            "Japanese traditions",
+            "Powerful moments",
+            "Dramatic"
+        ],
+        "alternateNames": [
+            "Taiko"
+        ],
+        "folder": "taiko_drum-mp3"
+    },
+    {
+        "program": 117,
+        "name": "melodic_tom",
+        "label": "Melodic Tom",
+        "category": "Percussion & Effects",
+        "description": "A drum with pitched tone allowing melody to be played on drums. Produces warm, resonant drum tones.",
+        "commonUses": [
+            "Drum fills",
+            "Melodic drum passages",
+            "Rhythm variations",
+            "Transitions"
+        ],
+        "alternateNames": [
+            "Tom Tom",
+            "Pitched Tom"
+        ],
+        "folder": "melodic_tom-mp3"
+    },
+    {
+        "program": 118,
+        "name": "synth_drum",
+        "label": "Synth Drum",
+        "category": "Percussion & Effects",
+        "description": "A synthesized drum with electronic character and controllable pitch. Creates punchy, modern drum sound.",
+        "commonUses": [
+            "Electronic drums",
+            "Techno",
+            "House",
+            "Electronic music"
+        ],
+        "alternateNames": [
+            "Electronic Drum",
+            "Synth Kick"
+        ],
+        "folder": "synth_drum-mp3"
+    },
+    {
+        "program": 119,
+        "name": "reverse_cymbal",
+        "label": "Reverse Cymbal",
+        "category": "Percussion & Effects",
+        "description": "A cymbal sound played in reverse creating a swelling, building effect. Creates dramatic, cinematic character.",
+        "commonUses": [
+            "Film scores",
+            "Dramatic builds",
+            "Cinematic effects",
+            "Transitions"
+        ],
+        "alternateNames": [
+            "Reversed Crash"
+        ],
+        "folder": "reverse_cymbal-mp3"
+    },
+    {
+        "program": 120,
+        "name": "guitar_fret_noise",
+        "label": "Guitar Fret Noise",
+        "category": "Percussion & Effects",
+        "description": "Percussive noise from sliding fingers on guitar frets. Creates realistic, articulate guitar effect.",
+        "commonUses": [
+            "Guitar transitions",
+            "Realistic guitar effects",
+            "Rhythmic accents",
+            "Detail"
+        ],
+        "alternateNames": [
+            "Fret Squeak",
+            "Slide Noise"
+        ],
+        "folder": "guitar_fret_noise-mp3"
+    },
+    {
+        "program": 121,
+        "name": "breath_noise",
+        "label": "Breath Noise",
+        "category": "Percussion & Effects",
+        "description": "The sound of breath for wind instruments. Creates realistic articulation for woodwind and brass sounds.",
+        "commonUses": [
+            "Wind instrument realism",
+            "Articulation",
+            "Breath effects",
+            "Detail"
+        ],
+        "alternateNames": [
+            "Wind Breath"
+        ],
+        "folder": "breath_noise-mp3"
+    },
+    {
+        "program": 122,
+        "name": "seashore",
+        "label": "Seashore",
+        "category": "Percussion & Effects",
+        "description": "An ambient sound effect of ocean waves and seashore ambience. Creates natural, relaxing atmosphere.",
+        "commonUses": [
+            "Nature ambience",
+            "Relaxation",
+            "Meditation",
+            "Coastal scenes"
+        ],
+        "alternateNames": [
+            "Ocean Waves",
+            "Beach Sounds"
+        ],
+        "folder": "seashore-mp3"
+    },
+    {
+        "program": 123,
+        "name": "bird_tweet",
+        "label": "Bird Tweet",
+        "category": "Percussion & Effects",
+        "description": "The sound of birds chirping and tweeting. Creates natural, outdoor ambience.",
+        "commonUses": [
+            "Nature ambience",
+            "Outdoor scenes",
+            "Morning passages",
+            "Natural effects"
+        ],
+        "alternateNames": [
+            "Bird Chirp",
+            "Bird Song"
+        ],
+        "folder": "bird_tweet-mp3"
+    },
+    {
+        "program": 124,
+        "name": "telephone_ring",
+        "label": "Telephone Ring",
+        "category": "Percussion & Effects",
+        "description": "The sound of a traditional telephone ringing. Creates recognizable, modern effect.",
+        "commonUses": [
+            "Sound effects",
+            "Realistic dialogue",
+            "Comedy",
+            "Office scenes"
+        ],
+        "alternateNames": [
+            "Phone Ring"
+        ],
+        "folder": "telephone_ring-mp3"
+    },
+    {
+        "program": 125,
+        "name": "helicopter",
+        "label": "Helicopter",
+        "category": "Percussion & Effects",
+        "description": "The sound of helicopter rotors and engine. Creates dramatic, cinematic effect.",
+        "commonUses": [
+            "Sound effects",
+            "Action sequences",
+            "Cinematic",
+            "Dramatic moments"
+        ],
+        "alternateNames": [
+            "Helicopter Rotor"
+        ],
+        "folder": "helicopter-mp3"
+    },
+    {
+        "program": 126,
+        "name": "applause",
+        "label": "Applause",
+        "category": "Percussion & Effects",
+        "description": "The sound of an audience applauding and cheering. Creates live, celebratory atmosphere.",
+        "commonUses": [
+            "Live performance",
+            "Celebratory moments",
+            "Comedy",
+            "Audience response"
+        ],
+        "alternateNames": [
+            "Crowd Applause"
+        ],
+        "folder": "applause-mp3"
+    },
+    {
+        "program": 127,
+        "name": "gunshot",
+        "label": "Gunshot",
+        "category": "Percussion & Effects",
+        "description": "The sound of a gunshot with punch and impact. Creates dramatic, action-oriented effect.",
+        "commonUses": [
+            "Sound effects",
+            "Action sequences",
+            "Combat scenes",
+            "Dramatic impacts"
+        ],
+        "alternateNames": [
+            "Gunfire",
+            "Firearm"
+        ],
+        "folder": "gunshot-mp3"
+    }
+]
