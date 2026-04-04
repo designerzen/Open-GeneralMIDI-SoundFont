@@ -486,6 +486,120 @@ const html = `<!DOCTYPE html>
       text-decoration: underline;
     }
 
+    @media (prefers-color-scheme: dark) {
+      body {
+        background: #0f172a;
+        color: #e5e7eb;
+      }
+
+      .controls select,
+      .controls input {
+        background: #1f2937;
+        color: #e5e7eb;
+        border-color: #374151;
+      }
+
+      .controls select:hover,
+      .controls input:hover {
+        border-color: #6366f1;
+      }
+
+      .stat-card {
+        background: #1f2937;
+        border-color: #374151;
+      }
+
+      .stat-card:hover {
+        border-color: #6366f1;
+      }
+
+      .stat-card .label {
+        color: #9ca3af;
+      }
+
+      .instrument-card {
+        background: #1f2937;
+        border-color: #374151;
+      }
+
+      .instrument-card:hover {
+        border-color: #6366f1;
+      }
+
+      .instrument-card .label {
+        color: #f3f4f6;
+      }
+
+      .instrument-card .description {
+        color: #d1d5db;
+      }
+
+      .instrument-card .folder {
+        background: rgba(99, 102, 241, 0.1);
+        border-left-color: #6366f1;
+      }
+
+      .audio-player {
+        background: rgba(99, 102, 241, 0.1);
+        border-color: rgba(99, 102, 241, 0.2);
+      }
+
+      .audio-player em {
+        color: #a78bfa;
+      }
+
+      .metadata {
+        color: #9ca3af;
+        border-top-color: #374151;
+      }
+
+      .metadata strong {
+        color: #f3f4f6;
+      }
+
+      .manifest-list {
+        background: #1f2937;
+        border-color: #374151;
+      }
+
+      .manifest-list h3 {
+        color: #f3f4f6;
+      }
+
+      .manifest-list li {
+        border-bottom-color: #374151;
+      }
+
+      .manifest-list code {
+        background: #111827;
+        color: #a78bfa;
+      }
+
+      .piano-key {
+        background: #374151;
+        border-color: #4b5563;
+        color: #d1d5db;
+      }
+
+      .piano-key:hover {
+        background: #4b5563;
+        border-color: #6366f1;
+      }
+
+      .piano-container {
+        background: rgba(99, 102, 241, 0.05);
+        border-color: rgba(99, 102, 241, 0.2);
+      }
+
+      .piano-keyboard {
+        background: #111827;
+      }
+
+      .loading {
+        color: #a78bfa;
+      }
+    }
+
     @media (max-width: 768px) {
       header {
         padding: 60px 24px;
