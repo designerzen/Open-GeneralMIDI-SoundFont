@@ -475,3 +475,26 @@ console.log('✓ Copied index.json to gh-pages');
 
 fs.copyFileSync('./OpenGM24.json', './gh-pages/OpenGM24.json');
 console.log('✓ Copied OpenGM24.json to gh-pages');
+
+// Copy entire OpenGM24 directory with all MP3 files
+function copyDirRecursive(src, dest) {
+  if (!fs.existsSync(dest)) {
+    fs.mkdirSync(dest, { recursive: true });
+  }
+  
+  const files = fs.readdirSync(src);
+  files.forEach(file => {
+    const srcPath = path.join(src, file);
+    const destPath = path.join(dest, file);
+    const stat = fs.statSync(srcPath);
+    
+    if (stat.isDirectory()) {
+      copyDirRecursive(srcPath, destPath);
+    } else {
+      fs.copyFileSync(srcPath, destPath);
+    }
+  });
+}
+
+copyDirRecursive('./OpenGM24', './gh-pages/OpenGM24');
+console.log('✓ Copied OpenGM24 directory with all MP3 files to gh-pages');
