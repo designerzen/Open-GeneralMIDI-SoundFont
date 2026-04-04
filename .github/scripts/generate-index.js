@@ -43,6 +43,9 @@ const html = `<!DOCTYPE html>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>OpenGM24 - General MIDI Soundfont Repository</title>
   <link rel="alternate" type="application/feed+json" href="feed.json" title="OpenGM24 JSON Feed">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -51,254 +54,370 @@ const html = `<!DOCTYPE html>
     }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-      line-height: 1.6;
-      color: #333;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.7;
+      color: #1a1a1a;
+      background: #fafafa;
       min-height: 100vh;
-      padding: 20px;
     }
 
     .container {
-      max-width: 1200px;
+      max-width: 1400px;
       margin: 0 auto;
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-      overflow: hidden;
     }
 
     header {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      background: linear-gradient(180deg, #0f172a 0%, #1a2847 100%);
       color: white;
-      padding: 40px 20px;
+      padding: 80px 40px;
       text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: 
+        radial-gradient(circle at 20% 50%, rgba(196, 181, 253, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(99, 102, 241, 0.1) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    header > * {
+      position: relative;
+      z-index: 1;
     }
 
     header h1 {
-      font-size: 2.5em;
-      margin-bottom: 10px;
+      font-family: 'Playfair Display', serif;
+      font-size: 4em;
+      font-weight: 900;
+      margin-bottom: 12px;
+      letter-spacing: -2px;
+      text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
     }
 
     header p {
-      font-size: 1.1em;
-      opacity: 0.95;
+      font-size: 1.25em;
+      opacity: 0.85;
+      font-weight: 300;
+      letter-spacing: 1px;
     }
 
     .content {
-      padding: 40px 20px;
+      padding: 60px 40px;
     }
 
     .section {
-      margin-bottom: 40px;
+      margin-bottom: 80px;
     }
 
     .section h2 {
-      font-size: 1.8em;
-      color: #667eea;
-      margin-bottom: 20px;
-      padding-bottom: 10px;
-      border-bottom: 3px solid #667eea;
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5em;
+      color: #0f172a;
+      margin-bottom: 40px;
+      font-weight: 700;
+      position: relative;
+      padding-bottom: 20px;
+    }
+
+    .section h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(90deg, #c4b5fd, #6366f1);
     }
 
     .controls {
-      margin-bottom: 20px;
+      margin-bottom: 40px;
       display: flex;
-      gap: 10px;
+      gap: 12px;
       flex-wrap: wrap;
     }
 
-    .controls select {
-      padding: 8px 12px;
-      border: 1px solid #ddd;
-      border-radius: 4px;
+    .controls select,
+    .controls input {
+      padding: 12px 16px;
+      border: 1.5px solid #e5e7eb;
+      border-radius: 8px;
       background: white;
+      font-family: 'Inter', sans-serif;
+      font-size: 1em;
       cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .controls select:hover,
+    .controls input:hover {
+      border-color: #6366f1;
+      box-shadow: 0 2px 8px rgba(99, 102, 241, 0.1);
+    }
+
+    .controls input:focus,
+    .controls select:focus {
+      outline: none;
+      border-color: #6366f1;
+      box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
     }
 
     .stats {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-      margin-bottom: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+      margin-bottom: 40px;
     }
 
     .stat-card {
-      background: #f5f5f5;
-      padding: 20px;
-      border-radius: 8px;
+      background: white;
+      padding: 32px;
+      border-radius: 12px;
       text-align: center;
-      border-left: 4px solid #667eea;
+      border: 1.5px solid #e5e7eb;
+      transition: all 0.3s;
+    }
+
+    .stat-card:hover {
+      border-color: #c4b5fd;
+      box-shadow: 0 8px 24px rgba(99, 102, 241, 0.08);
+      transform: translateY(-2px);
     }
 
     .stat-card .number {
-      font-size: 2em;
-      font-weight: bold;
-      color: #667eea;
+      font-family: 'Playfair Display', serif;
+      font-size: 3em;
+      font-weight: 900;
+      background: linear-gradient(135deg, #6366f1, #a78bfa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 8px;
     }
 
     .stat-card .label {
-      color: #666;
-      margin-top: 5px;
+      color: #6b7280;
+      font-size: 0.95em;
+      font-weight: 500;
+      letter-spacing: 0.5px;
     }
 
     .instruments-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 28px;
+      animation: fadeIn 0.6s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .instrument-card {
-      background: #f9f9f9;
-      border: 1px solid #e0e0e0;
-      border-radius: 8px;
-      padding: 20px;
-      transition: all 0.3s ease;
+      background: white;
+      border: 1.5px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 28px;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
     }
 
     .instrument-card:hover {
-      border-color: #667eea;
-      box-shadow: 0 8px 16px rgba(102, 126, 234, 0.1);
+      border-color: #c4b5fd;
+      box-shadow: 0 16px 40px rgba(99, 102, 241, 0.12);
       transform: translateY(-4px);
     }
 
     .instrument-card .program {
-      color: #667eea;
-      font-size: 0.85em;
-      font-weight: bold;
-      margin-bottom: 5px;
+      color: #8b5cf6;
+      font-size: 0.75em;
+      font-weight: 600;
+      margin-bottom: 8px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
     }
 
     .instrument-card .label {
-      font-size: 1.2em;
-      font-weight: bold;
-      color: #333;
-      margin-bottom: 8px;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5em;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 12px;
+      line-height: 1.2;
     }
 
     .instrument-card .category {
-      color: #764ba2;
-      font-size: 0.9em;
-      margin-bottom: 10px;
+      color: #7c3aed;
+      font-size: 0.85em;
+      margin-bottom: 16px;
       display: inline-block;
-      background: #f0e6ff;
-      padding: 4px 12px;
-      border-radius: 20px;
+      background: linear-gradient(135deg, rgba(196, 181, 253, 0.2), rgba(167, 139, 250, 0.2));
+      padding: 6px 14px;
+      border-radius: 24px;
+      border: 1px solid rgba(124, 58, 237, 0.3);
+      font-weight: 500;
     }
 
     .instrument-card .description {
-      color: #666;
+      color: #4b5563;
       font-size: 0.95em;
-      margin-bottom: 12px;
-      line-height: 1.5;
+      margin-bottom: 16px;
+      line-height: 1.6;
+      flex-grow: 1;
     }
 
     .instrument-card .folder {
-      color: #667eea;
+      color: #6366f1;
       font-size: 0.85em;
       word-break: break-all;
-      background: #f0f7ff;
-      padding: 8px;
-      border-radius: 4px;
-      border-left: 3px solid #667eea;
-      margin-bottom: 12px;
+      background: linear-gradient(135deg, rgba(99, 102, 241, 0.08), rgba(167, 139, 250, 0.08));
+      padding: 10px;
+      border-radius: 8px;
+      border-left: 3px solid #6366f1;
+      margin-bottom: 16px;
+      font-weight: 500;
+    }
+
+    .instrument-card .folder a {
+      color: #6366f1;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .instrument-card .folder a:hover {
+      color: #8b5cf6;
+      text-decoration: underline;
     }
 
     .audio-player {
-      background: #f0f7ff;
-      padding: 12px;
-      border-radius: 4px;
-      margin-bottom: 12px;
+      background: linear-gradient(135deg, rgba(99, 102, 241, 0.08), rgba(167, 139, 250, 0.08));
+      padding: 14px;
+      border-radius: 8px;
+      margin-bottom: 16px;
+      border: 1.5px solid rgba(99, 102, 241, 0.2);
     }
 
     .audio-player audio {
       width: 100%;
       height: 32px;
+      accent-color: #6366f1;
     }
 
     .audio-player em {
       display: block;
       font-size: 0.75em;
-      color: #667eea;
-      margin-top: 4px;
+      color: #6366f1;
+      margin-top: 6px;
+      font-weight: 500;
     }
 
     .piano-container {
-      background: #f0f7ff;
-      padding: 12px;
-      border-radius: 4px;
-      margin-bottom: 12px;
+      background: linear-gradient(135deg, rgba(99, 102, 241, 0.08), rgba(167, 139, 250, 0.08));
+      padding: 16px;
+      border-radius: 8px;
+      margin-bottom: 16px;
       overflow-x: auto;
+      border: 1.5px solid rgba(99, 102, 241, 0.2);
     }
 
     .piano-keyboard {
       display: flex;
-      gap: 2px;
+      gap: 3px;
       min-width: 100%;
       padding: 8px 0;
     }
 
     .piano-key {
       flex: 0 0 auto;
-      min-width: 28px;
-      height: 80px;
-      border: 1px solid #999;
-      border-radius: 4px 4px 0 0;
+      min-width: 32px;
+      height: 72px;
+      border: 1.5px solid #d1d5db;
+      border-radius: 6px 6px 0 0;
       background: white;
       cursor: pointer;
       display: flex;
       align-items: flex-end;
       justify-content: center;
-      font-size: 0.7em;
+      font-size: 0.65em;
       padding-bottom: 4px;
-      font-weight: bold;
-      color: #333;
-      transition: all 0.1s;
+      font-weight: 600;
+      color: #6b7280;
+      transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     .piano-key:hover {
-      background: #f5f5f5;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-
-    .piano-key.active {
-      background: #667eea;
-      color: white;
+      background: #f8f9fa;
+      border-color: #c4b5fd;
+      box-shadow: 0 3px 8px rgba(99, 102, 241, 0.1);
+      transform: scale(1.05);
     }
 
     .piano-key.playing {
-      background: #764ba2;
+      background: linear-gradient(135deg, #6366f1, #8b5cf6);
       color: white;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      border-color: #6366f1;
+      box-shadow: 0 6px 16px rgba(99, 102, 241, 0.3);
+      transform: scale(1.08);
     }
 
     .metadata {
       font-size: 0.85em;
-      color: #666;
+      color: #4b5563;
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid #e5e7eb;
     }
 
     .metadata p {
-      margin-bottom: 4px;
+      margin-bottom: 6px;
+      line-height: 1.5;
+    }
+
+    .metadata strong {
+      color: #0f172a;
+      font-weight: 600;
     }
 
     .metadata a {
-      color: #667eea;
+      color: #6366f1;
       text-decoration: none;
+      transition: color 0.2s;
     }
 
     .metadata a:hover {
+      color: #8b5cf6;
       text-decoration: underline;
     }
 
     .manifest-list {
-      background: #f9f9f9;
-      border-radius: 8px;
-      padding: 20px;
+      background: white;
+      border-radius: 12px;
+      padding: 32px;
+      border: 1.5px solid #e5e7eb;
     }
 
     .manifest-list h3 {
-      color: #667eea;
-      margin-bottom: 15px;
+      color: #0f172a;
+      margin-bottom: 24px;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3em;
+      font-weight: 700;
     }
 
     .manifest-list ul {
@@ -306,8 +425,9 @@ const html = `<!DOCTYPE html>
     }
 
     .manifest-list li {
-      padding: 8px 0;
-      border-bottom: 1px solid #e0e0e0;
+      padding: 14px 0;
+      border-bottom: 1px solid #e5e7eb;
+      font-size: 0.95em;
     }
 
     .manifest-list li:last-child {
@@ -315,64 +435,116 @@ const html = `<!DOCTYPE html>
     }
 
     .manifest-list code {
-      background: #f0f0f0;
-      padding: 2px 8px;
-      border-radius: 4px;
+      background: #f8f9fa;
+      padding: 3px 10px;
+      border-radius: 6px;
       font-family: 'Courier New', monospace;
-      color: #333;
+      color: #6366f1;
+      font-weight: 500;
     }
 
     .manifest-list a {
-      color: #667eea;
+      color: #6366f1;
       text-decoration: none;
+      transition: color 0.2s;
+      font-weight: 500;
     }
 
     .manifest-list a:hover {
+      color: #8b5cf6;
       text-decoration: underline;
     }
 
     .loading {
       text-align: center;
-      color: #667eea;
+      color: #6366f1;
       font-size: 1.1em;
+      padding: 60px 20px;
     }
 
     footer {
-      background: #f5f5f5;
-      padding: 20px;
+      background: linear-gradient(180deg, #0f172a 0%, #1a2847 100%);
+      padding: 60px 40px;
       text-align: center;
-      color: #666;
+      color: rgba(255, 255, 255, 0.75);
       font-size: 0.9em;
+      border-top: 1.5px solid rgba(196, 181, 253, 0.2);
+    }
+
+    footer p {
+      margin-bottom: 12px;
+      line-height: 1.6;
     }
 
     footer a {
-      color: #667eea;
+      color: #c4b5fd;
       text-decoration: none;
+      transition: color 0.2s;
+      font-weight: 500;
     }
 
     footer a:hover {
+      color: #e9d5ff;
       text-decoration: underline;
     }
 
     @media (max-width: 768px) {
+      header {
+        padding: 60px 24px;
+      }
+
       header h1 {
-        font-size: 1.8em;
+        font-size: 2.5em;
+      }
+
+      header p {
+        font-size: 1.05em;
+      }
+
+      .content {
+        padding: 40px 24px;
+      }
+
+      .section h2 {
+        font-size: 2em;
       }
 
       .instruments-grid {
         grid-template-columns: 1fr;
+        gap: 20px;
       }
 
       .stats {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
       }
 
       .controls {
         flex-direction: column;
       }
 
-      .controls select {
+      .controls select,
+      .controls input {
         width: 100%;
+      }
+
+      .instrument-card {
+        padding: 20px;
+      }
+
+      .instrument-card .label {
+        font-size: 1.3em;
+      }
+
+      .stat-card .number {
+        font-size: 2.5em;
+      }
+
+      .manifest-list {
+        padding: 24px;
+      }
+
+      footer {
+        padding: 40px 24px;
       }
     }
   </style>
