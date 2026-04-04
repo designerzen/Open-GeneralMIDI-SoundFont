@@ -187,7 +187,6 @@ const html = `<!DOCTYPE html>
     .stat-card:hover {
       border-color: #c4b5fd;
       box-shadow: 0 8px 24px rgba(99, 102, 241, 0.08);
-      transform: translateY(-2px);
     }
 
     .stat-card .number {
@@ -239,7 +238,6 @@ const html = `<!DOCTYPE html>
     .instrument-card:hover {
       border-color: #c4b5fd;
       box-shadow: 0 16px 40px rgba(99, 102, 241, 0.12);
-      transform: translateY(-4px);
     }
 
     .instrument-card .program {
