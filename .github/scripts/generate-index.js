@@ -182,7 +182,6 @@ const html = `<!DOCTYPE html>
       border-radius: 12px;
       text-align: center;
       border: 1.5px solid #e5e7eb;
-      transition: all 0.3s;
     }
 
     .stat-card:hover {
@@ -365,7 +364,6 @@ const html = `<!DOCTYPE html>
       background: #f8f9fa;
       border-color: #c4b5fd;
       box-shadow: 0 3px 8px rgba(99, 102, 241, 0.1);
-      transform: scale(1.05);
     }
 
     .piano-key.playing {
@@ -373,7 +371,7 @@ const html = `<!DOCTYPE html>
       color: white;
       border-color: #6366f1;
       box-shadow: 0 6px 16px rgba(99, 102, 241, 0.3);
-      transform: scale(1.08);
+      transform: translateY(4px);
     }
 
     .metadata {
@@ -602,27 +600,39 @@ const html = `<!DOCTYPE html>
     let allInstruments = [];
     let currentAudio = null;
 
-    function playNote(audioPath, keyElement) {
+    function startNote(audioPath, keyElement) {
       // Stop any currently playing audio
       if (currentAudio) {
         currentAudio.pause();
         currentAudio.currentTime = 0;
       }
 
-      // Remove playing class from all keys
-      document.querySelectorAll('.piano-key').forEach(k => k.classList.remove('playing'));
-
       // Create and play new audio
       currentAudio = new Audio(audioPath);
-      currentAudio.play().catch(err => console.error('Error playing audio:', err));
+      currentAudio.volume = 1.0;
+      
+      const playPromise = currentAudio.play();
+      
+      if (playPromise !== undefined) {
+        playPromise.catch(err => {
+          console.error('Error playing audio:', err);
+        });
+      }
 
       // Add playing class to this key
       keyElement.classList.add('playing');
+    }
 
-      // Remove class when audio ends
-      currentAudio.addEventListener('ended', () => {
-        keyElement.classList.remove('playing');
-      });
+    function stopNote(keyElement) {
+      // Stop audio
+      if (currentAudio) {
+        currentAudio.pause();
+        currentAudio.currentTime = 0;
+        currentAudio = null;
+      }
+
+      // Remove playing class
+      keyElement.classList.remove('playing');
     }
 
     // Load manifest files
@@ -686,43 +696,53 @@ const html = `<!DOCTYPE html>
       }
 
       grid.innerHTML = filtered.map(instrument => {
-        const sampleNote = 'C4'; // Middle C as default sample
-        const audioPath = instrument.folder ? \`./OpenGM24/\${instrument.folder}/\${sampleNote}.mp3\` : '';
-        const audioHtml = audioPath ? \`<div class="audio-player"><audio controls><source src="\${audioPath}" type="audio/mpeg"></audio><em>Sample: \${sampleNote}</em></div>\` : '';
-        
-        const pianoHtml = instrument.notes && instrument.notes.length > 0 ? \`
-          <div class="piano-container">
-            <div class="piano-keyboard" data-instrument="\${instrument.program}">
-              \${instrument.notes.map(note => \`<div class="piano-key" data-note="\${note}" data-path="./OpenGM24/\${instrument.folder}/\${note}.mp3">\${note}</div>\`).join('')}
-            </div>
-          </div>
-        \` : '';
-        
-        return \`
-          <div class="instrument-card">
-            <div class="program">Program: \${instrument.program}</div>
-            <div class="label">\${instrument.label}</div>
-            <div class="category">\${instrument.category}</div>
-            <div class="description">\${instrument.description}</div>
-            <div class="folder">📁 <a href="./OpenGM24/\${instrument.folder}/" target="_blank">\${instrument.folder}</a></div>
-            \${audioHtml}
-            \${pianoHtml}
-            <div class="metadata">
-              <p><strong>Name:</strong> \${instrument.name}</p>
-              \${instrument.commonUses ? \`<p><strong>Uses:</strong> \${instrument.commonUses.join(', ')}</p>\` : ''}
-              \${instrument.alternateNames ? \`<p><strong>Alternates:</strong> \${instrument.alternateNames.join(', ')}</p>\` : ''}
-            </div>
-          </div>
-        \`;
-      }).join('');
-      
-      // Attach event listeners to piano keys
-      document.querySelectorAll('.piano-key').forEach(key => {
-        key.addEventListener('click', function() {
-          playNote(this.dataset.path, this);
-        });
-      });
-    }
+         const sampleNote = 'C4'; // Middle C as default sample
+         const audioPath = instrument.folder ? \`./OpenGM24/\${instrument.folder}/\${sampleNote}.mp3\` : '';
+         const audioHtml = audioPath ? \`<div class="audio-player"><audio controls><source src="\${audioPath}" type="audio/mpeg"></audio><em>Sample: \${sampleNote}</em></div>\` : '';
+         
+         const pianoHtml = instrument.notes && instrument.notes.length > 0 ? \`
+           <div class="piano-container">
+             <div class="piano-keyboard" data-instrument="\${instrument.program}">
+               \${instrument.notes.map(note => \`<div class="piano-key" data-note="\${note}" data-path="./OpenGM24/\${instrument.folder}/\${note}.mp3">\${note}</div>\`).join('')}
+             </div>
+           </div>
+         \` : '';
+         
+         return \`
+           <div class="instrument-card">
+             <div class="program">Program: \${instrument.program}</div>
+             <div class="label">\${instrument.label}</div>
+             <div class="category">\${instrument.category}</div>
+             <div class="description">\${instrument.description}</div>
+             <div class="folder">📁 <a href="./OpenGM24/\${instrument.folder}/" target="_blank">\${instrument.folder}</a></div>
+             \${audioHtml}
+             \${pianoHtml}
+             <div class="metadata">
+               <p><strong>Name:</strong> \${instrument.name}</p>
+               \${instrument.commonUses ? \`<p><strong>Uses:</strong> \${instrument.commonUses.join(', ')}</p>\` : ''}
+               \${instrument.alternateNames ? \`<p><strong>Alternates:</strong> \${instrument.alternateNames.join(', ')}</p>\` : ''}
+             </div>
+           </div>
+         \`;
+       }).join('');
+       
+       // Attach event listeners to piano keys
+       document.querySelectorAll('.piano-key').forEach(key => {
+         key.addEventListener('pointerdown', function(e) {
+           e.preventDefault();
+           startNote(this.dataset.path, this);
+         });
+         
+         key.addEventListener('pointerup', function(e) {
+           e.preventDefault();
+           stopNote(this);
+         });
+         
+         key.addEventListener('pointerleave', function(e) {
+           stopNote(this);
+         });
+       });
+       }
 
     // Load data when page loads
     loadData();
