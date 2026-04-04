@@ -754,9 +754,9 @@ const jsonFeed = {
 fs.writeFileSync('./gh-pages/feed.json', JSON.stringify(jsonFeed, null, 2), 'utf8');
 console.log('✓ Generated feed.json successfully');
 
-// Copy manifest files to gh-pages
-fs.copyFileSync('./index.json', './gh-pages/index.json');
-console.log('✓ Copied index.json to gh-pages');
+// Save enhanced index.json with notes to gh-pages
+fs.writeFileSync('./gh-pages/index.json', JSON.stringify(indexData, null, 2), 'utf8');
+console.log('✓ Saved enhanced index.json with notes to gh-pages');
 
 fs.copyFileSync('./OpenGM24.json', './gh-pages/OpenGM24.json');
 console.log('✓ Copied OpenGM24.json to gh-pages');
