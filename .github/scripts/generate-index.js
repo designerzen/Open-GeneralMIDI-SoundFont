@@ -250,15 +250,15 @@ const html = `<!DOCTYPE html>
       <div class="section">
         <h2>Instruments</h2>
         <div class="instruments-grid">
-          ${indexData.map(instrument => \`
+          ${indexData.map(instrument => `
             <div class="instrument-card">
-              <div class="program">Program: \${instrument.program}</div>
-              <div class="label">\${instrument.label}</div>
-              <div class="category">\${instrument.category}</div>
-              <div class="description">\${instrument.description}</div>
-              <div class="folder">📁 \${instrument.folder || 'N/A'}</div>
+              <div class="program">Program: ${instrument.program}</div>
+              <div class="label">${instrument.label}</div>
+              <div class="category">${instrument.category}</div>
+              <div class="description">${instrument.description}</div>
+              <div class="folder">📁 ${instrument.folder || 'N/A'}</div>
             </div>
-          \`).join('')}
+          `).join('')}
         </div>
       </div>
 
@@ -281,12 +281,12 @@ const html = `<!DOCTYPE html>
           <h3>Instrument Categories:</h3>
           <ul>
             ${Array.from(new Set(indexData.map(i => i.category)))
-              .sort()
-              .map(category => {
-                const count = indexData.filter(i => i.category === category).length;
-                return \`<li><strong>\${category}</strong> (\${count} instruments)</li>\`;
-              })
-              .join('')}
+                .sort()
+                .map(category => {
+                  const count = indexData.filter(i => i.category === category).length;
+                  return `<li><strong>${category}</strong> (${count} instruments)</li>`;
+                })
+                .join('')}
           </ul>
         </div>
       </div>
