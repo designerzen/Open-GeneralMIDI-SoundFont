@@ -5,6 +5,30 @@ const path = require('path');
 const indexData = JSON.parse(fs.readFileSync('./index.json', 'utf8'));
 const openGM24List = JSON.parse(fs.readFileSync('./OpenGM24.json', 'utf8'));
 
+// Add available notes for each instrument
+indexData.forEach(instrument => {
+  if (instrument.folder) {
+    const folderPath = `./OpenGM24/${instrument.folder}`;
+    if (fs.existsSync(folderPath)) {
+      const files = fs.readdirSync(folderPath)
+        .filter(f => f.endsWith('.mp3'))
+        .map(f => f.replace('.mp3', ''))
+        .sort((a, b) => {
+          // Custom sort: C1, Db1, D1, ... B7, C8 etc
+          const noteOrder = ['C', 'Db', 'D', 'Eb', 'E', 'F', 'Gb', 'G', 'Ab', 'A', 'Bb', 'B'];
+          const aNote = a.match(/([A-G]b?)/)[0];
+          const aOctave = parseInt(a.match(/\d+/)[0]);
+          const bNote = b.match(/([A-G]b?)/)[0];
+          const bOctave = parseInt(b.match(/\d+/)[0]);
+          
+          if (aOctave !== bOctave) return aOctave - bOctave;
+          return noteOrder.indexOf(aNote) - noteOrder.indexOf(bNote);
+        });
+      instrument.notes = files;
+    }
+  }
+});
+
 // Create a map for quick lookup
 const instrumentMap = new Map();
 indexData.forEach(instrument => {
@@ -199,6 +223,55 @@ const html = `<!DOCTYPE html>
       margin-top: 4px;
     }
 
+    .piano-container {
+      background: #f0f7ff;
+      padding: 12px;
+      border-radius: 4px;
+      margin-bottom: 12px;
+      overflow-x: auto;
+    }
+
+    .piano-keyboard {
+      display: flex;
+      gap: 2px;
+      min-width: 100%;
+      padding: 8px 0;
+    }
+
+    .piano-key {
+      flex: 0 0 auto;
+      min-width: 28px;
+      height: 80px;
+      border: 1px solid #999;
+      border-radius: 4px 4px 0 0;
+      background: white;
+      cursor: pointer;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      font-size: 0.7em;
+      padding-bottom: 4px;
+      font-weight: bold;
+      color: #333;
+      transition: all 0.1s;
+    }
+
+    .piano-key:hover {
+      background: #f5f5f5;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .piano-key.active {
+      background: #667eea;
+      color: white;
+    }
+
+    .piano-key.playing {
+      background: #764ba2;
+      color: white;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
     .metadata {
       font-size: 0.85em;
       color: #666;
@@ -355,6 +428,30 @@ const html = `<!DOCTYPE html>
 
   <script>
     let allInstruments = [];
+    let currentAudio = null;
+
+    function playNote(audioPath, keyElement) {
+      // Stop any currently playing audio
+      if (currentAudio) {
+        currentAudio.pause();
+        currentAudio.currentTime = 0;
+      }
+
+      // Remove playing class from all keys
+      document.querySelectorAll('.piano-key').forEach(k => k.classList.remove('playing'));
+
+      // Create and play new audio
+      currentAudio = new Audio(audioPath);
+      currentAudio.play().catch(err => console.error('Error playing audio:', err));
+
+      // Add playing class to this key
+      keyElement.classList.add('playing');
+
+      // Remove class when audio ends
+      currentAudio.addEventListener('ended', () => {
+        keyElement.classList.remove('playing');
+      });
+    }
 
     // Load manifest files
     async function loadData() {
@@ -421,6 +518,14 @@ const html = `<!DOCTYPE html>
         const audioPath = instrument.folder ? \`./OpenGM24/\${instrument.folder}/\${sampleNote}.mp3\` : '';
         const audioHtml = audioPath ? \`<div class="audio-player"><audio controls><source src="\${audioPath}" type="audio/mpeg"></audio><em>Sample: \${sampleNote}</em></div>\` : '';
         
+        const pianoHtml = instrument.notes && instrument.notes.length > 0 ? \`
+          <div class="piano-container">
+            <div class="piano-keyboard" data-instrument="\${instrument.program}">
+              \${instrument.notes.map(note => \`<div class="piano-key" data-note="\${note}" data-path="./OpenGM24/\${instrument.folder}/\${note}.mp3">\${note}</div>\`).join('')}
+            </div>
+          </div>
+        \` : '';
+        
         return \`
           <div class="instrument-card">
             <div class="program">Program: \${instrument.program}</div>
@@ -429,6 +534,7 @@ const html = `<!DOCTYPE html>
             <div class="description">\${instrument.description}</div>
             <div class="folder">📁 <a href="./OpenGM24/\${instrument.folder}/" target="_blank">\${instrument.folder}</a></div>
             \${audioHtml}
+            \${pianoHtml}
             <div class="metadata">
               <p><strong>Name:</strong> \${instrument.name}</p>
               \${instrument.commonUses ? \`<p><strong>Uses:</strong> \${instrument.commonUses.join(', ')}</p>\` : ''}
@@ -437,6 +543,13 @@ const html = `<!DOCTYPE html>
           </div>
         \`;
       }).join('');
+      
+      // Attach event listeners to piano keys
+      document.querySelectorAll('.piano-key').forEach(key => {
+        key.addEventListener('click', function() {
+          playNote(this.dataset.path, this);
+        });
+      });
     }
 
     // Load data when page loads
