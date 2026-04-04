@@ -61,7 +61,7 @@ All soundfont files are organized in the `OpenGM24/` directory by instrument nam
 
 ## Source Materials
 
-This soundfont collection is derived from the following open-source soundfont sources:
+This soundfont collection is derived from the following open-source soundfont sources as well as some personally recorded variations :
 
 ### Primary Sources
 
@@ -80,16 +80,10 @@ This soundfont collection is derived from the following open-source soundfont so
   - License: [Creative Commons Attribution Share-Alike 3.0](https://creativecommons.org/licenses/by-sa/3.0/)
   - Reference: [MIDI.js Soundfonts - FatBoy](https://gleitz.github.io/midi-js-soundfonts/FatBoy/)
 
-- **Tabla Soundfont**
-  - Source: [Tabla.sf2](https://gleitz.github.io/midi-js-soundfonts/Tabla/Tabla.sf2) (4.06 MB uncompressed)
-  - License: [Creative Commons Attribution Share-Alike 3.0](https://creativecommons.org/licenses/by-sa/3.0/)
-  - Reference: [MIDI.js Soundfonts - Tabla](https://gleitz.github.io/midi-js-soundfonts/Tabla/)
-  - Note: Tabla is a popular Indian percussion instrument; not all notes contain sound. Sounds are mapped on notes C4 to E6.
-
 ## Notes
 
 - All sounds are provided as MP3 files for web compatibility and reasonable file sizes
 - See `OpenGM24.json` for the complete instrument list in JSON format
 - Instruments follow the General MIDI standard numbering (0-127)
-- Files can be served directly from this repository for use in web applications
+- Files can be served directly from the githun-pages URL / RSS for use in web applications
 - Based on the work of [gleitz](https://github.com/gleitz/) and the [MIDI.js](https://github.com/mudcube/MIDI.js) project
