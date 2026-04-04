@@ -231,7 +231,6 @@ const html = `<!DOCTYPE html>
       border: 1.5px solid #e5e7eb;
       border-radius: 12px;
       padding: 28px;
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
       display: flex;
       flex-direction: column;
       height: 100%;
@@ -296,7 +295,6 @@ const html = `<!DOCTYPE html>
     .instrument-card .folder a {
       color: #6366f1;
       text-decoration: none;
-      transition: color 0.2s;
     }
 
     .instrument-card .folder a:hover {
@@ -392,10 +390,12 @@ const html = `<!DOCTYPE html>
       font-weight: 600;
     }
 
+    a{
+      transition: color 0.2s;
+    }
     .metadata a {
       color: #6366f1;
       text-decoration: none;
-      transition: color 0.2s;
     }
 
     .metadata a:hover {
@@ -477,7 +477,6 @@ const html = `<!DOCTYPE html>
     footer a {
       color: #c4b5fd;
       text-decoration: none;
-      transition: color 0.2s;
       font-weight: 500;
     }
 
