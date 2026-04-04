@@ -17,7 +17,7 @@ const html = `<!DOCTYPE html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OpenGM24 - General MIDI Soundfont Index</title>
+  <title>OpenGM24 - General MIDI Soundfont Repository</title>
   <link rel="alternate" type="application/feed+json" href="feed.json" title="OpenGM24 JSON Feed">
   <style>
     * {
@@ -77,6 +77,21 @@ const html = `<!DOCTYPE html>
       border-bottom: 3px solid #667eea;
     }
 
+    .controls {
+      margin-bottom: 20px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .controls select {
+      padding: 8px 12px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      background: white;
+      cursor: pointer;
+    }
+
     .stats {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -105,7 +120,7 @@ const html = `<!DOCTYPE html>
 
     .instruments-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
       gap: 20px;
     }
 
@@ -115,7 +130,6 @@ const html = `<!DOCTYPE html>
       border-radius: 8px;
       padding: 20px;
       transition: all 0.3s ease;
-      cursor: pointer;
     }
 
     .instrument-card:hover {
@@ -163,6 +177,44 @@ const html = `<!DOCTYPE html>
       padding: 8px;
       border-radius: 4px;
       border-left: 3px solid #667eea;
+      margin-bottom: 12px;
+    }
+
+    .audio-player {
+      background: #f0f7ff;
+      padding: 12px;
+      border-radius: 4px;
+      margin-bottom: 12px;
+    }
+
+    .audio-player audio {
+      width: 100%;
+      height: 32px;
+    }
+
+    .audio-player em {
+      display: block;
+      font-size: 0.75em;
+      color: #667eea;
+      margin-top: 4px;
+    }
+
+    .metadata {
+      font-size: 0.85em;
+      color: #666;
+    }
+
+    .metadata p {
+      margin-bottom: 4px;
+    }
+
+    .metadata a {
+      color: #667eea;
+      text-decoration: none;
+    }
+
+    .metadata a:hover {
+      text-decoration: underline;
     }
 
     .manifest-list {
@@ -197,12 +249,36 @@ const html = `<!DOCTYPE html>
       color: #333;
     }
 
+    .manifest-list a {
+      color: #667eea;
+      text-decoration: none;
+    }
+
+    .manifest-list a:hover {
+      text-decoration: underline;
+    }
+
+    .loading {
+      text-align: center;
+      color: #667eea;
+      font-size: 1.1em;
+    }
+
     footer {
       background: #f5f5f5;
       padding: 20px;
       text-align: center;
       color: #666;
       font-size: 0.9em;
+    }
+
+    footer a {
+      color: #667eea;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
     }
 
     @media (max-width: 768px) {
@@ -217,6 +293,14 @@ const html = `<!DOCTYPE html>
       .stats {
         grid-template-columns: repeat(2, 1fr);
       }
+
+      .controls {
+        flex-direction: column;
+      }
+
+      .controls select {
+        width: 100%;
+      }
     }
   </style>
 </head>
@@ -230,35 +314,22 @@ const html = `<!DOCTYPE html>
     <div class="content">
       <!-- Statistics Section -->
       <div class="section">
-        <div class="stats">
-          <div class="stat-card">
-            <div class="number">${indexData.length}</div>
-            <div class="label">Total Instruments</div>
-          </div>
-          <div class="stat-card">
-            <div class="number">${openGM24List.length}</div>
-            <div class="label">OpenGM24 Pack</div>
-          </div>
-          <div class="stat-card">
-            <div class="number">${new Set(indexData.map(i => i.category)).size}</div>
-            <div class="label">Categories</div>
-          </div>
+        <div class="stats" id="stats">
+          <div class="loading">Loading statistics...</div>
         </div>
       </div>
 
       <!-- Instruments Section -->
       <div class="section">
         <h2>Instruments</h2>
-        <div class="instruments-grid">
-          ${indexData.map(instrument => `
-            <div class="instrument-card">
-              <div class="program">Program: ${instrument.program}</div>
-              <div class="label">${instrument.label}</div>
-              <div class="category">${instrument.category}</div>
-              <div class="description">${instrument.description}</div>
-              <div class="folder">📁 ${instrument.folder || 'N/A'}</div>
-            </div>
-          `).join('')}
+        <div class="controls">
+          <select id="categoryFilter">
+            <option value="">All Categories</option>
+          </select>
+          <input type="text" id="searchInput" placeholder="Search instruments..." style="padding: 8px 12px; border: 1px solid #ddd; border-radius: 4px; flex: 1;">
+        </div>
+        <div class="instruments-grid" id="instrumentsGrid">
+          <div class="loading">Loading instruments...</div>
         </div>
       </div>
 
@@ -268,25 +339,8 @@ const html = `<!DOCTYPE html>
         <div class="manifest-list">
           <h3>Available JSON Manifests:</h3>
           <ul>
-            <li><code>index.json</code> - Complete instrument index with metadata (${indexData.length} instruments)</li>
-            <li><code>OpenGM24.json</code> - OpenGM24 soundfont pack instrument names (${openGM24List.length} instruments)</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Category Overview -->
-      <div class="section">
-        <h2>Categories Overview</h2>
-        <div class="manifest-list">
-          <h3>Instrument Categories:</h3>
-          <ul>
-            ${Array.from(new Set(indexData.map(i => i.category)))
-                .sort()
-                .map(category => {
-                  const count = indexData.filter(i => i.category === category).length;
-                  return `<li><strong>${category}</strong> (${count} instruments)</li>`;
-                })
-                .join('')}
+            <li><a href="./index.json"><code>index.json</code></a> - Complete instrument index with metadata (${indexData.length} instruments)</li>
+            <li><a href="./OpenGM24.json"><code>OpenGM24.json</code></a> - OpenGM24 soundfont pack instrument names (${openGM24List.length} instruments)</li>
           </ul>
         </div>
       </div>
@@ -298,6 +352,96 @@ const html = `<!DOCTYPE html>
       <p><a href="https://github.com/designerzen/open-generalmidi-soundfont">View on GitHub</a> | <a href="feed.json">📡 JSON Feed</a></p>
     </footer>
   </div>
+
+  <script>
+    let allInstruments = [];
+
+    // Load manifest files
+    async function loadData() {
+      try {
+        const response = await fetch('./index.json');
+        allInstruments = await response.json();
+        
+        // Update stats
+        const uniqueCategories = new Set(allInstruments.map(i => i.category));
+        document.getElementById('stats').innerHTML = \`
+          <div class="stat-card">
+            <div class="number">\${allInstruments.length}</div>
+            <div class="label">Total Instruments</div>
+          </div>
+          <div class="stat-card">
+            <div class="number">\${uniqueCategories.size}</div>
+            <div class="label">Categories</div>
+          </div>
+        \`;
+
+        // Populate category filter
+        const categories = Array.from(uniqueCategories).sort();
+        const categoryFilter = document.getElementById('categoryFilter');
+        categories.forEach(category => {
+          const option = document.createElement('option');
+          option.value = category;
+          option.textContent = category;
+          categoryFilter.appendChild(option);
+        });
+
+        // Initial render
+        renderInstruments();
+
+        // Add event listeners
+        document.getElementById('categoryFilter').addEventListener('change', renderInstruments);
+        document.getElementById('searchInput').addEventListener('input', renderInstruments);
+      } catch (error) {
+        console.error('Error loading data:', error);
+        document.getElementById('instrumentsGrid').innerHTML = '<div class="loading">Error loading instruments</div>';
+      }
+    }
+
+    function renderInstruments() {
+      const category = document.getElementById('categoryFilter').value;
+      const search = document.getElementById('searchInput').value.toLowerCase();
+
+      let filtered = allInstruments.filter(instrument => {
+        const matchesCategory = !category || instrument.category === category;
+        const matchesSearch = !search || 
+          instrument.label.toLowerCase().includes(search) ||
+          instrument.name.toLowerCase().includes(search) ||
+          instrument.description.toLowerCase().includes(search);
+        return matchesCategory && matchesSearch;
+      });
+
+      const grid = document.getElementById('instrumentsGrid');
+      if (filtered.length === 0) {
+        grid.innerHTML = '<div class="loading">No instruments found</div>';
+        return;
+      }
+
+      grid.innerHTML = filtered.map(instrument => {
+        const sampleNote = 'C4'; // Middle C as default sample
+        const audioPath = instrument.folder ? \`./OpenGM24/\${instrument.folder}/\${sampleNote}.mp3\` : '';
+        const audioHtml = audioPath ? \`<div class="audio-player"><audio controls><source src="\${audioPath}" type="audio/mpeg"></audio><em>Sample: \${sampleNote}</em></div>\` : '';
+        
+        return \`
+          <div class="instrument-card">
+            <div class="program">Program: \${instrument.program}</div>
+            <div class="label">\${instrument.label}</div>
+            <div class="category">\${instrument.category}</div>
+            <div class="description">\${instrument.description}</div>
+            <div class="folder">📁 <a href="./OpenGM24/\${instrument.folder}/" target="_blank">\${instrument.folder}</a></div>
+            \${audioHtml}
+            <div class="metadata">
+              <p><strong>Name:</strong> \${instrument.name}</p>
+              \${instrument.commonUses ? \`<p><strong>Uses:</strong> \${instrument.commonUses.join(', ')}</p>\` : ''}
+              \${instrument.alternateNames ? \`<p><strong>Alternates:</strong> \${instrument.alternateNames.join(', ')}</p>\` : ''}
+            </div>
+          </div>
+        \`;
+      }).join('');
+    }
+
+    // Load data when page loads
+    loadData();
+  </script>
 </body>
 </html>`;
 
@@ -317,25 +461,17 @@ const jsonFeed = {
   description: "Complete General MIDI soundfont repository with 128 instruments",
   home_page_url: "https://designerzen.github.io/open-generalmidi-soundfont/",
   feed_url: "https://designerzen.github.io/open-generalmidi-soundfont/feed.json",
-  icon: "https://raw.githubusercontent.com/designerzen/open-generalmidi-soundfont/main/README.md",
-  items: indexData.map(instrument => ({
-    id: `instrument-${instrument.program}`,
-    title: `${instrument.program}: ${instrument.label}`,
-    content_html: `
-      <h3>${instrument.label}</h3>
-      <p><strong>Program:</strong> ${instrument.program}</p>
-      <p><strong>Name:</strong> ${instrument.name}</p>
-      <p><strong>Category:</strong> ${instrument.category}</p>
-      <p><strong>Description:</strong> ${instrument.description}</p>
-      ${instrument.commonUses ? `<p><strong>Common Uses:</strong> ${instrument.commonUses.join(', ')}</p>` : ''}
-      ${instrument.alternateNames ? `<p><strong>Alternate Names:</strong> ${instrument.alternateNames.join(', ')}</p>` : ''}
-      ${instrument.folder ? `<p><strong>Folder:</strong> ${instrument.folder}</p>` : ''}
-    `.trim(),
-    tags: [instrument.category, ...(instrument.commonUses || []), ...(instrument.alternateNames || [])],
-    date_published: new Date().toISOString()
-  }))
+  manifest_url: "https://designerzen.github.io/open-generalmidi-soundfont/index.json",
+  documentation: "Browse the complete instrument catalog at https://designerzen.github.io/open-generalmidi-soundfont/ or access the raw JSON manifests at the links above."
 };
 
 // Write the JSON feed file
 fs.writeFileSync('./gh-pages/feed.json', JSON.stringify(jsonFeed, null, 2), 'utf8');
 console.log('✓ Generated feed.json successfully');
+
+// Copy manifest files to gh-pages
+fs.copyFileSync('./index.json', './gh-pages/index.json');
+console.log('✓ Copied index.json to gh-pages');
+
+fs.copyFileSync('./OpenGM24.json', './gh-pages/OpenGM24.json');
+console.log('✓ Copied OpenGM24.json to gh-pages');
