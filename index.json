@@ -22,7 +22,7 @@
         "name": "bright_acoustic_piano",
         "label": "Bright Acoustic Piano",
         "category": "Pianos & Keyboards",
-        "description": "An acoustic piano with a brighter, more percussive attack. Emphasizes the higher harmonics for a more cutting tone.",
+        "description": "A full, warm acoustic upright piano recorded by Meta's Creative Audio team, mapped to the Bright Acoustic Piano slot. Uses the mezzo-forte recordings with full natural decays.",
         "commonUses": [
             "Contemporary classical",
             "Upbeat pop",
@@ -32,7 +32,10 @@
             "Bright Piano",
             "Upright Piano sound"
         ],
-        "folder": "bright_acoustic_piano-mp3"
+        "folder": "bright_acoustic_piano-mp3",
+        "source": "Meta Piano v1.0.0 (original WAVs)",
+        "license": "CC0-1.0",
+        "velocityLayer": 3
     },
     {
         "program": 2,
@@ -429,7 +432,7 @@
         "name": "acoustic_guitar_nylon",
         "label": "Acoustic Guitar - Nylon String",
         "category": "Guitars",
-        "description": "A classical acoustic guitar with nylon strings. Produces warm, mellow, resonant tones with natural finger-picked character.",
+        "description": "Meta's recorded nylon-string guitar with warm fingerstyle attacks and full natural decays. Native recordings span E2–B5; notes outside that range are transposed extensions.",
         "commonUses": [
             "Classical music",
             "Flamenco",
@@ -440,14 +443,19 @@
             "Classical Guitar",
             "Spanish Guitar"
         ],
-        "folder": "acoustic_guitar_nylon-mp3"
+        "folder": "acoustic_guitar_nylon-mp3",
+        "source": "Meta Nylon Guitar v1.0.0 (original WAVs)",
+        "license": "CC0-1.0",
+        "velocityLayer": 1,
+        "technique": "fingerstyle",
+        "nativeMidiRange": [40, 83]
     },
     {
         "program": 25,
         "name": "acoustic_guitar_steel",
         "label": "Acoustic Guitar - Steel String",
         "category": "Guitars",
-        "description": "An acoustic guitar with steel strings. Produces bright, punchy, cutting tones with pronounced attack.",
+        "description": "Meta's recorded steel-string acoustic guitar with medium-picked attacks and full natural decays. Native recordings span E2–C6; notes outside that range are transposed extensions.",
         "commonUses": [
             "Folk",
             "Country",
@@ -458,7 +466,12 @@
             "Steel String Guitar",
             "Folk Guitar"
         ],
-        "folder": "acoustic_guitar_steel-mp3"
+        "folder": "acoustic_guitar_steel-mp3",
+        "source": "Meta Steel Guitar v1.0.0 (original WAVs)",
+        "license": "CC0-1.0",
+        "velocityLayer": 2,
+        "technique": "medium picked",
+        "nativeMidiRange": [40, 84]
     },
     {
         "program": 26,

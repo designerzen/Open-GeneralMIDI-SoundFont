@@ -1,0 +1,819 @@
+{
+  "source": "Meta Piano by Meta's Creative Audio team",
+  "license": "CC0-1.0",
+  "release": "meta-piano-v1.0.0",
+  "sourceArchive": "https://github.com/facebookincubator/Meta-open-sound/releases/download/meta-piano-v1.0.0/meta-open-sound-meta-piano-wav.zip",
+  "archiveSha256": "ee9023dbde849ecab393a098aa0cfbd6f2ef48d4a096b9c08808b72fc913f70e",
+  "sourceFormat": "24-bit 48 kHz WAV",
+  "encoder": "ffmpeg version 9.0.2-essentials_build-www.gyan.dev Copyright (c) 2000-2026 the FFmpeg developers",
+  "ffmpegOutputArguments": [
+    "-map",
+    "0:a:0",
+    "-c:a",
+    "libmp3lame",
+    "-q:a",
+    "5",
+    "-map_metadata",
+    "-1",
+    "-write_xing",
+    "1"
+  ],
+  "processing": "Direct WAV to MP3; original sample rate, channels, levels, and complete decays preserved. No normalization.",
+  "gmProgram": 1,
+  "velocityLayer": 3,
+  "dynamic": "mezzo-forte",
+  "samples": [
+    {
+      "file": "A0.mp3",
+      "midi": 21,
+      "sourceWav": "INSPiano_Vel03_A0_01.wav",
+      "sourceSha256": "17dc7ef3d9821b4da0d35d2798d67cf47c60a227765a2ef6147837b04e796f13",
+      "sha256": "4042894a3f2586967f9cc00ea1e929c2098abdb2a096036db9684caae99bd065",
+      "channels": 2,
+      "sourceDurationSeconds": 9.262833
+    },
+    {
+      "file": "A1.mp3",
+      "midi": 33,
+      "sourceWav": "INSPiano_Vel03_A1_01.wav",
+      "sourceSha256": "8f23956edbfb9f270335c17d5ae30af90507a5abd871e7ba3517c7bf9311c33f",
+      "sha256": "0fda0e73c8f0387234e87d6a539ff1238fd6fc5239161f4b3cc0644ddd2643fc",
+      "channels": 2,
+      "sourceDurationSeconds": 11.672375
+    },
+    {
+      "file": "A2.mp3",
+      "midi": 45,
+      "sourceWav": "INSPiano_Vel03_A2_01.wav",
+      "sourceSha256": "8be376f433bc902dcc3ab6e84f3b0e953180da6cb746d88a8ad5078797ad149b",
+      "sha256": "4b7f68659728195c4036dd84a17480606635c05f7d03ca30afa09f92f57baf8e",
+      "channels": 2,
+      "sourceDurationSeconds": 14.170021
+    },
+    {
+      "file": "A3.mp3",
+      "midi": 57,
+      "sourceWav": "INSPiano_Vel03_A3_01.wav",
+      "sourceSha256": "5f86e89e0e4b91ca936cb678e5a2fab42b0276c399a3f264c47cf11959c558ca",
+      "sha256": "da69ee28d338b129241207c7cea7981464be7eb686577ec622092ca0a2abec9c",
+      "channels": 2,
+      "sourceDurationSeconds": 9.86225
+    },
+    {
+      "file": "A4.mp3",
+      "midi": 69,
+      "sourceWav": "INSPiano_Vel03_A4_01.wav",
+      "sourceSha256": "394fa4ffd75c2c2daa5f1f3a250e9957da70841edb22ec96cc618f1900894550",
+      "sha256": "3a2abf7cb2a7e9ddcd34dd27ea30f8b18a3e15c29d187f4107118d7788634f83",
+      "channels": 2,
+      "sourceDurationSeconds": 7.647438
+    },
+    {
+      "file": "A5.mp3",
+      "midi": 81,
+      "sourceWav": "INSPiano_Vel03_A5_01.wav",
+      "sourceSha256": "fd5c01307c514b2913a4f84a35b8333315b32a911a899fe1e39458222b1d4fc5",
+      "sha256": "61c12bb9d049cbbc21484876f2d7da61cc2e4cb72d043eff20aa128b8585662a",
+      "channels": 2,
+      "sourceDurationSeconds": 9.413313
+    },
+    {
+      "file": "A6.mp3",
+      "midi": 93,
+      "sourceWav": "INSPiano_Vel03_A6_01.wav",
+      "sourceSha256": "d1290b072cf1fed85d3360b8665c6458eb331c3e7c0f33aa6d5e2238dc7695e2",
+      "sha256": "b676274a2258288cb1f134820fd38e55d3a50fff90f283023b2c1ffb3f7791f3",
+      "channels": 2,
+      "sourceDurationSeconds": 4.8385
+    },
+    {
+      "file": "A7.mp3",
+      "midi": 105,
+      "sourceWav": "INSPiano_Vel03_A7_01.wav",
+      "sourceSha256": "b02fadd659c8a90d19fc012950153387605effa121e9f6cb511ec0c462a85906",
+      "sha256": "f31edcf7dda9633cf1b3d91303e1fb70f90aec394a5ddfb591629c63c1a93f43",
+      "channels": 2,
+      "sourceDurationSeconds": 2.507667
+    },
+    {
+      "file": "Bb0.mp3",
+      "midi": 22,
+      "sourceWav": "INSPiano_Vel03_As0_01.wav",
+      "sourceSha256": "1f5664e29e45a267b7c489d9f9cdbbe5c94603e125b2b5df3b5f583246ff727b",
+      "sha256": "f9b6f7aa376ce1d5b1109500ae268e476b7f4db574efa679e397ddd7c03badd1",
+      "channels": 2,
+      "sourceDurationSeconds": 8.722875
+    },
+    {
+      "file": "Bb1.mp3",
+      "midi": 34,
+      "sourceWav": "INSPiano_Vel03_As1_01.wav",
+      "sourceSha256": "6848449fefef9542c4c90eaa4a59077047f9f3ea80d4cc47601ba87f0ec5fdb8",
+      "sha256": "c09441331197c697f836d0753c500764efd32ed324d49a1056a2e81465e64c0f",
+      "channels": 2,
+      "sourceDurationSeconds": 12.544688
+    },
+    {
+      "file": "Bb2.mp3",
+      "midi": 46,
+      "sourceWav": "INSPiano_Vel03_As2_01.wav",
+      "sourceSha256": "9fa7709f29eb0ed57891c71f45f7895638d4b417a6846d699d2fdae092874952",
+      "sha256": "77404966f692bdbcf89dc3d4f31f1716148182e23faf7efab13d98a3dbbabd47",
+      "channels": 2,
+      "sourceDurationSeconds": 11.429375
+    },
+    {
+      "file": "Bb3.mp3",
+      "midi": 58,
+      "sourceWav": "INSPiano_Vel03_As3_01.wav",
+      "sourceSha256": "4d78a58f8e1e0078f8b560faa053177d659aad8be1a761426c86aa00b7a497a8",
+      "sha256": "e8af779b1ab3f5c1d0cbac3101289943d97033bb2ced903f903ff79513988944",
+      "channels": 2,
+      "sourceDurationSeconds": 11.55375
+    },
+    {
+      "file": "Bb4.mp3",
+      "midi": 70,
+      "sourceWav": "INSPiano_Vel03_As4_01.wav",
+      "sourceSha256": "f0c258b6d508ffad582f8da19c87cfaad8fd29df30d3a0e6516cbd7eaeb67e12",
+      "sha256": "7abff9f2738664d35dd4934caa7bc647459680462d2fedee328966f7e83d7a4d",
+      "channels": 2,
+      "sourceDurationSeconds": 10.796604
+    },
+    {
+      "file": "Bb5.mp3",
+      "midi": 82,
+      "sourceWav": "INSPiano_Vel03_As5_01.wav",
+      "sourceSha256": "ad535cadae169991e8e7680b38180c0f2bf8b3e5198891dc5dd7ab5bab065b5b",
+      "sha256": "bd461c78545baefdb31da303771d2693fc3be1da260138cbe3d681c4acefc35a",
+      "channels": 2,
+      "sourceDurationSeconds": 5.984042
+    },
+    {
+      "file": "Bb6.mp3",
+      "midi": 94,
+      "sourceWav": "INSPiano_Vel03_As6_01.wav",
+      "sourceSha256": "7b830719e5dd7f920a23761ffb445d02e38f4a824d1848eeeb2a80c740713c3a",
+      "sha256": "13d31b10ff6617f93c34d0a7c2cfc4acd34736debfea53fed4d4f7b5db1559e9",
+      "channels": 2,
+      "sourceDurationSeconds": 5.394625
+    },
+    {
+      "file": "Bb7.mp3",
+      "midi": 106,
+      "sourceWav": "INSPiano_Vel03_As7_01.wav",
+      "sourceSha256": "498c11d148375911d331216bc3d951d3555f3b5b62cdfeab2e27b6bc6b96c27d",
+      "sha256": "ade4b752e2c470574c13eb7e2b977d4afb36ce6942334ce8d57c2025d0a360ea",
+      "channels": 2,
+      "sourceDurationSeconds": 2.492667
+    },
+    {
+      "file": "B0.mp3",
+      "midi": 23,
+      "sourceWav": "INSPiano_Vel03_B0_01.wav",
+      "sourceSha256": "48d037126e83f573d9f22c9f02ef4785367bd49f7b7bb19baa7ed15c1f982651",
+      "sha256": "551c9d942db5a99c29bf1f0b7adfaa07b5623d53930e14296118148d9d357726",
+      "channels": 2,
+      "sourceDurationSeconds": 9.413688
+    },
+    {
+      "file": "B1.mp3",
+      "midi": 35,
+      "sourceWav": "INSPiano_Vel03_B1_01.wav",
+      "sourceSha256": "061aa0160208c3edf9ec322aac561891920597a1c4b4764563a9f643766acecc",
+      "sha256": "a03baa8249c98339619801621744cc02c3a97235fabb4643cfd6b71f5884a198",
+      "channels": 2,
+      "sourceDurationSeconds": 13.765417
+    },
+    {
+      "file": "B2.mp3",
+      "midi": 47,
+      "sourceWav": "INSPiano_Vel03_B2_01.wav",
+      "sourceSha256": "e6b784460018059d5790d63f3c72b03ae479bd1d7f70f3b907768acc3e6592c4",
+      "sha256": "92f45eeecc6f385c0c7b18ba93143eea43da597dc3fb06545a2a8e952d2ac2fa",
+      "channels": 2,
+      "sourceDurationSeconds": 12.914208
+    },
+    {
+      "file": "B3.mp3",
+      "midi": 59,
+      "sourceWav": "INSPiano_Vel03_B3_01.wav",
+      "sourceSha256": "909a3111da007965fd90dc0bdd906bd034dea4da0d4c2115b4edd8b297e3a8c2",
+      "sha256": "c3820a2894216283821eea57a488be7ea1315be1b20815faedd46ab218a6fa24",
+      "channels": 2,
+      "sourceDurationSeconds": 12.932667
+    },
+    {
+      "file": "B4.mp3",
+      "midi": 71,
+      "sourceWav": "INSPiano_Vel03_B4_01.wav",
+      "sourceSha256": "affea695dbf215eb4bb134bb183d9a8c20152cb7eedaa97c5a7195b917714053",
+      "sha256": "ce72f0a9be3787f552c78478f6b55b1c9565a9eceb85653a48f1734095746668",
+      "channels": 2,
+      "sourceDurationSeconds": 7.851396
+    },
+    {
+      "file": "B5.mp3",
+      "midi": 83,
+      "sourceWav": "INSPiano_Vel03_B5_01.wav",
+      "sourceSha256": "120f1c58c12ead904a04c4e96ad8a39d9c7b097de18a0867e69d15e3427fd047",
+      "sha256": "c3537d316669a50899f88bddc81f528f99a48b9261ed62145a39332030379c8d",
+      "channels": 2,
+      "sourceDurationSeconds": 6.204708
+    },
+    {
+      "file": "B6.mp3",
+      "midi": 95,
+      "sourceWav": "INSPiano_Vel03_B6_01.wav",
+      "sourceSha256": "efbedb6eeb1c73950c3f0e3ae1738141b1c0076bd8fa72766eb974e637bf735c",
+      "sha256": "00828ba4360ac9c0cc1e80eedbde0dc87bec0f606ab239326c6914666bc565fd",
+      "channels": 2,
+      "sourceDurationSeconds": 4.413708
+    },
+    {
+      "file": "B7.mp3",
+      "midi": 107,
+      "sourceWav": "INSPiano_Vel03_B7_01.wav",
+      "sourceSha256": "c28d5d179686b11eefd6cf5936124669a7d45ca6dc81b3b64d9abf64c2c21b01",
+      "sha256": "39bb2d94b6f323706b451ab7fc09a4a440acc57aef585c40b0b42f6b686571d1",
+      "channels": 2,
+      "sourceDurationSeconds": 2.096792
+    },
+    {
+      "file": "C1.mp3",
+      "midi": 24,
+      "sourceWav": "INSPiano_Vel03_C1_01.wav",
+      "sourceSha256": "554bc0ddaf9f1f16cddf8185ce648e6491b0091b65a5c22d52ca58f1ce081262",
+      "sha256": "5555328ddcd2647a566634ace07512e07968f0cac988ab60a63065745e5be4f8",
+      "channels": 2,
+      "sourceDurationSeconds": 9.293375
+    },
+    {
+      "file": "C2.mp3",
+      "midi": 36,
+      "sourceWav": "INSPiano_Vel03_C2_01.wav",
+      "sourceSha256": "373d6214e746dba0e35029ce15816135022aa5a7b4126798dc2abe262f253054",
+      "sha256": "25038d8fc41c0b7d73c4c7bbf28b9fbd97c1df5b91ed08c53c47256407928f37",
+      "channels": 2,
+      "sourceDurationSeconds": 15.288375
+    },
+    {
+      "file": "C3.mp3",
+      "midi": 48,
+      "sourceWav": "INSPiano_Vel03_C3_01.wav",
+      "sourceSha256": "d5c09f36cef0b4a108ff9078af3dc2b203224e14ff55b358e441446da0d267e0",
+      "sha256": "d8170d35b756eae6653d8c1d7f884f04c08655dbaebd7df541ebfdbb2a973687",
+      "channels": 2,
+      "sourceDurationSeconds": 11.988271
+    },
+    {
+      "file": "C4.mp3",
+      "midi": 60,
+      "sourceWav": "INSPiano_Vel03_C4_01.wav",
+      "sourceSha256": "b37311c07f3fbf6f0b02b6b3e01dab5d44176ad927273c6972893c43fd2150c9",
+      "sha256": "9b4e2610f8899fb7c1743d468335f787e1eff4d61bba47e30042437935b99f9e",
+      "channels": 2,
+      "sourceDurationSeconds": 10.01275
+    },
+    {
+      "file": "C5.mp3",
+      "midi": 72,
+      "sourceWav": "INSPiano_Vel03_C5_01.wav",
+      "sourceSha256": "446e397d1690e623faa06c07206ddabc0273f6edd95df795aa89fea292111360",
+      "sha256": "03af49e2b32949972026b8e409838e1c879bfdf3b5d366258df131d09cb845ab",
+      "channels": 2,
+      "sourceDurationSeconds": 9.13375
+    },
+    {
+      "file": "C6.mp3",
+      "midi": 84,
+      "sourceWav": "INSPiano_Vel03_C6_01.wav",
+      "sourceSha256": "6838079a03875c4b180ce3f98187373ab604c55d65f320c3c090a7f984b04a48",
+      "sha256": "1b80d7662945d60defb2177e8855568c2ec917190fccb4886d27eaf2a707b5d7",
+      "channels": 2,
+      "sourceDurationSeconds": 6.819625
+    },
+    {
+      "file": "C7.mp3",
+      "midi": 96,
+      "sourceWav": "INSPiano_Vel03_C7_01.wav",
+      "sourceSha256": "59c32c9c3f577f714568c948c033b6fad87c6b338ea521f100f4e4cb6d759cf5",
+      "sha256": "5f41b77ac6578204790466a87a307f81244a5632f2eb1f562a990187c447ffd8",
+      "channels": 2,
+      "sourceDurationSeconds": 3.168771
+    },
+    {
+      "file": "C8.mp3",
+      "midi": 108,
+      "sourceWav": "INSPiano_Vel03_C8_01.wav",
+      "sourceSha256": "bc92072fb080f8ee1281788775fc4ac34f24c075312e3b0cf69979011913889a",
+      "sha256": "05cb0aa9175d3bd90c256eb55c0d2b4c5341a58a40866329030eb2444844fa1a",
+      "channels": 2,
+      "sourceDurationSeconds": 1.908917
+    },
+    {
+      "file": "Db1.mp3",
+      "midi": 25,
+      "sourceWav": "INSPiano_Vel03_Cs1_01.wav",
+      "sourceSha256": "122e7b49b02000b50bfaba0d3ee2e7c66708a22ce90f7785feb5bcec9e2010b3",
+      "sha256": "27ead9231ef64a60194440c9d7e21f2f5532cb267cef6c1fbf09498b5ee8b0ab",
+      "channels": 2,
+      "sourceDurationSeconds": 9.580604
+    },
+    {
+      "file": "Db2.mp3",
+      "midi": 37,
+      "sourceWav": "INSPiano_Vel03_Cs2_01.wav",
+      "sourceSha256": "36ba69df8ed9f6f3f9c123196f481ef23b76272f0f8a279cdcf4d680cbce1540",
+      "sha256": "a100033a17a663b9bd7530cfc03fde1306e1cead8159167e22ed642a61c62189",
+      "channels": 2,
+      "sourceDurationSeconds": 11.948604
+    },
+    {
+      "file": "Db3.mp3",
+      "midi": 49,
+      "sourceWav": "INSPiano_Vel03_Cs3_01.wav",
+      "sourceSha256": "1031aca136608209dc52c8e4af851e02d42e5cda010477ef3df5c26d07a0be86",
+      "sha256": "b702181adf6eb4d0de525c0a9b0151a631aeb0433a500338acaf5a59fad865f3",
+      "channels": 2,
+      "sourceDurationSeconds": 12.173313
+    },
+    {
+      "file": "Db4.mp3",
+      "midi": 61,
+      "sourceWav": "INSPiano_Vel03_Cs4_01.wav",
+      "sourceSha256": "97545a7d2c94ca35965858f8bb8ee87513076b61ebf19466b9bbf13c8aec2deb",
+      "sha256": "c7d38b6730a15087b79dd8373228f2a61a2c07bc34eefc9235fb0b9eb9911250",
+      "channels": 2,
+      "sourceDurationSeconds": 12.016417
+    },
+    {
+      "file": "Db5.mp3",
+      "midi": 73,
+      "sourceWav": "INSPiano_Vel03_Cs5_01.wav",
+      "sourceSha256": "4d6329ee578ce92f272b52329b1af82323e8162e1eeccd6dd5ca7a18a504973c",
+      "sha256": "56c7d7f1cfb17e22194107684f74d19caa596b289756eca2078f207bf9bf9cf9",
+      "channels": 2,
+      "sourceDurationSeconds": 9.555542
+    },
+    {
+      "file": "Db6.mp3",
+      "midi": 85,
+      "sourceWav": "INSPiano_Vel03_Cs6_01.wav",
+      "sourceSha256": "4c56ef4b981ffcafc808ad830d26351f468b4d395bd680fafb52f8fbb32d75eb",
+      "sha256": "dec1161b4a8f8d90a3e55860eed57fe5702b063c6f4ec73d1426a0a4fd6d812a",
+      "channels": 2,
+      "sourceDurationSeconds": 6.085979
+    },
+    {
+      "file": "Db7.mp3",
+      "midi": 97,
+      "sourceWav": "INSPiano_Vel03_Cs7_01.wav",
+      "sourceSha256": "0fba21ef346d404a0e6007d86755aaa1f0afea7038ddcad161a5eb857c24e291",
+      "sha256": "02c1b147d14c7c9e0fa4edfcb655372209a5b03153bac0d571b88994deafea77",
+      "channels": 2,
+      "sourceDurationSeconds": 3.648729
+    },
+    {
+      "file": "D1.mp3",
+      "midi": 26,
+      "sourceWav": "INSPiano_Vel03_D1_01.wav",
+      "sourceSha256": "63920d29d38e5664392eec4825441f36fa15d53980fcacf48b4405c63656a4ec",
+      "sha256": "fd03dbf4d39115bf806a82f08d30f37cf00fd5db71e839be44d613df6e2b7f1e",
+      "channels": 2,
+      "sourceDurationSeconds": 9.697396
+    },
+    {
+      "file": "D2.mp3",
+      "midi": 38,
+      "sourceWav": "INSPiano_Vel03_D2_01.wav",
+      "sourceSha256": "8e65ec39356e4ff74c2d12daf2787a01d944b43967414acaa3d2a260cbd2534e",
+      "sha256": "f91d171d60650cd15e4be5b3ac4e843c2519c8260a0f5e0f5defc122d714ca9e",
+      "channels": 2,
+      "sourceDurationSeconds": 15.794104
+    },
+    {
+      "file": "D3.mp3",
+      "midi": 50,
+      "sourceWav": "INSPiano_Vel03_D3_01.wav",
+      "sourceSha256": "102dbb0ec98930320943a142bd9c865fb162205a47406ddadfadc06e53566da3",
+      "sha256": "11d66928070450d1b1c2c72559baa77c24a77ed73cb5fe18125b74936a413db6",
+      "channels": 2,
+      "sourceDurationSeconds": 11.594938
+    },
+    {
+      "file": "D4.mp3",
+      "midi": 62,
+      "sourceWav": "INSPiano_Vel03_D4_01.wav",
+      "sourceSha256": "d7110f73d1c1c811574da0c0d84ddde186f35bfa728f1faa541fe2782375809b",
+      "sha256": "d3036ed4d8bdfb7865d885302a852069b368849ab9319a3cb015614cf0f6a18d",
+      "channels": 2,
+      "sourceDurationSeconds": 11.050125
+    },
+    {
+      "file": "D5.mp3",
+      "midi": 74,
+      "sourceWav": "INSPiano_Vel03_D5_01.wav",
+      "sourceSha256": "3f76e689bd451073b0e427deb3fa6b6c7cdfb9a85dda87e0aed065a6db0d4b4a",
+      "sha256": "80c0de33d2c4a21db9e28f259fea0b43f1be4b4a00b454056fe7c3e0c13ed713",
+      "channels": 2,
+      "sourceDurationSeconds": 8.125208
+    },
+    {
+      "file": "D6.mp3",
+      "midi": 86,
+      "sourceWav": "INSPiano_Vel03_D6_01.wav",
+      "sourceSha256": "fa4b13489530a234298b488d11889adf5dd8e101a53670cd171ee708bde2849a",
+      "sha256": "9309b6a5cd6a20c6f8422b9e95b03c6f78ab3d1622158acc052f43732ad0cfbe",
+      "channels": 2,
+      "sourceDurationSeconds": 5.069583
+    },
+    {
+      "file": "D7.mp3",
+      "midi": 98,
+      "sourceWav": "INSPiano_Vel03_D7_01.wav",
+      "sourceSha256": "f5cdbd0a1c9d427e1be8564997df7673b5214c42a0b6ff3a068f1d97c37b6ac9",
+      "sha256": "54f1ddb0ab7ae5cf2caf5a8da00ae529909b3cc68ef061caac34265c2781081c",
+      "channels": 2,
+      "sourceDurationSeconds": 4.181458
+    },
+    {
+      "file": "Eb1.mp3",
+      "midi": 27,
+      "sourceWav": "INSPiano_Vel03_Ds1_01.wav",
+      "sourceSha256": "7880f86c4867cd779acb0ab67211bba97704f1d72c45c6abf296065e353fc011",
+      "sha256": "2078aa3794b1b18487c1dca539f6bd5117e4a272f16a94ed9555ecb02a5fcc2d",
+      "channels": 2,
+      "sourceDurationSeconds": 10.291021
+    },
+    {
+      "file": "Eb2.mp3",
+      "midi": 39,
+      "sourceWav": "INSPiano_Vel03_Ds2_01.wav",
+      "sourceSha256": "c6b0a509f2fc9ac823ed78dc352b926b478ee88d4ca3096b6439e1189de0cdac",
+      "sha256": "83361d4870c18cee7775033cbca4590a81bb40275a5e37fdefae028d40228787",
+      "channels": 2,
+      "sourceDurationSeconds": 14.214521
+    },
+    {
+      "file": "Eb3.mp3",
+      "midi": 51,
+      "sourceWav": "INSPiano_Vel03_Ds3_01.wav",
+      "sourceSha256": "bf4e74aa27105798457d1f9e37cf14fa9258d7ea660f0342eae3b647bfa90eb7",
+      "sha256": "4243fa54f4f539f08d0d620f82374c8f98e3965a78c42e689be42bc399f227bd",
+      "channels": 2,
+      "sourceDurationSeconds": 10.910458
+    },
+    {
+      "file": "Eb4.mp3",
+      "midi": 63,
+      "sourceWav": "INSPiano_Vel03_Ds4_01.wav",
+      "sourceSha256": "64ec7c101aa95ba671dac428cafc276a0fc4803414cd41db36cc10232278a3ed",
+      "sha256": "10ea3ead246ee5b16674f6f2542cb1622f03517d1a7c5bde7173c03f8e49c8ec",
+      "channels": 2,
+      "sourceDurationSeconds": 12.899292
+    },
+    {
+      "file": "Eb5.mp3",
+      "midi": 75,
+      "sourceWav": "INSPiano_Vel03_Ds5_01.wav",
+      "sourceSha256": "1ea8adcd2c4bb0755f3993ed03bbffdfcc8afeb868bf4f6236f07364946b3e67",
+      "sha256": "88b53deeb513af94b61a2bf130cb367f95d200731515d80406e05440f1348d37",
+      "channels": 2,
+      "sourceDurationSeconds": 11.397604
+    },
+    {
+      "file": "Eb6.mp3",
+      "midi": 87,
+      "sourceWav": "INSPiano_Vel03_Ds6_01.wav",
+      "sourceSha256": "bc547ca3a25a6d9b766679ea458cc5fc03dab3f9aacbc47915fd211886186da2",
+      "sha256": "62cc5902d3603b0db303abc583e07d6e1a749cef2b9022b206473f732181145a",
+      "channels": 2,
+      "sourceDurationSeconds": 4.973063
+    },
+    {
+      "file": "Eb7.mp3",
+      "midi": 99,
+      "sourceWav": "INSPiano_Vel03_Ds7_01.wav",
+      "sourceSha256": "24c0a320101613fc7194dff3a4355145afe3deff647399ff3f8bcd47a5068d67",
+      "sha256": "695345664b25020c4d90a5b6815d2f1470e7475401bf096ff33b7cd018de455c",
+      "channels": 2,
+      "sourceDurationSeconds": 3.639958
+    },
+    {
+      "file": "E1.mp3",
+      "midi": 28,
+      "sourceWav": "INSPiano_Vel03_E1_01.wav",
+      "sourceSha256": "9cee0c47d063289ef36bb1b36232aa37adcae06d104042423147e500844a45c6",
+      "sha256": "a75bce858f3fb81ec9fc3659fcf68ad9c1b69b346e8f256f3edb37965b29fb23",
+      "channels": 2,
+      "sourceDurationSeconds": 11.801688
+    },
+    {
+      "file": "E2.mp3",
+      "midi": 40,
+      "sourceWav": "INSPiano_Vel03_E2_01.wav",
+      "sourceSha256": "f6224a1b671cae64fda934df097de9553dbe55edcbe090719f39ec30dbcbfb72",
+      "sha256": "23d60c633b967c35c3905ede688d45717bc123505d505864d320706e5f0eabd8",
+      "channels": 2,
+      "sourceDurationSeconds": 15.776063
+    },
+    {
+      "file": "E3.mp3",
+      "midi": 52,
+      "sourceWav": "INSPiano_Vel03_E3_01.wav",
+      "sourceSha256": "1b18b57e8302d37fabb579567802ba9ac5074c5ddd4d4c603a8e9c0ef4cae303",
+      "sha256": "c8747834dd82f026cc6db4c41cdcde2eb5d20f92744202c95476666f34f74ff7",
+      "channels": 2,
+      "sourceDurationSeconds": 13.596063
+    },
+    {
+      "file": "E4.mp3",
+      "midi": 64,
+      "sourceWav": "INSPiano_Vel03_E4_01.wav",
+      "sourceSha256": "27f3b682b17f6704c6777f4692b883768fec8269366ad8cf209017da9194aada",
+      "sha256": "6a1265b107b3330d44f9fafef8efc2a73596f5fb887e8833ccffc7ca4c22584e",
+      "channels": 2,
+      "sourceDurationSeconds": 12.568188
+    },
+    {
+      "file": "E5.mp3",
+      "midi": 76,
+      "sourceWav": "INSPiano_Vel03_E5_01.wav",
+      "sourceSha256": "3af3291b4d4955d6fff7f6e6eddaaea841634d49cea01a8437d54b9e90fa5536",
+      "sha256": "30ca558936e1c69e43a3ca8e6f966132a234e9445b9d7c2ec36723bc5dfade54",
+      "channels": 2,
+      "sourceDurationSeconds": 10.391188
+    },
+    {
+      "file": "E6.mp3",
+      "midi": 88,
+      "sourceWav": "INSPiano_Vel03_E6_01.wav",
+      "sourceSha256": "1c37804e23ca2ce6b6ad0f14219ff86aa0ab1f703c12826592c2aa856b23611d",
+      "sha256": "a0c7015a11d0fc81158c46c39fcb1e89340177ab1901df8016acf1351bddf5cf",
+      "channels": 2,
+      "sourceDurationSeconds": 3.932896
+    },
+    {
+      "file": "E7.mp3",
+      "midi": 100,
+      "sourceWav": "INSPiano_Vel03_E7_01.wav",
+      "sourceSha256": "c7f9a8251bf8f816d6e6e7613852a6d1b8ebaafc51df692358c0003baec59706",
+      "sha256": "bd5360a652932be74e5ba142095715b5ba037f3e3998b841b808e45e583ab40a",
+      "channels": 2,
+      "sourceDurationSeconds": 3.430458
+    },
+    {
+      "file": "F1.mp3",
+      "midi": 29,
+      "sourceWav": "INSPiano_Vel03_F1_01.wav",
+      "sourceSha256": "c641a60480b4d38d4e858b6a5dd59cff8bb73eed003f532d3bd42fb21b576a4b",
+      "sha256": "b1bf124d94d35733b9d2f2731b47e512132f4f5858f17cf99fbdb97b4bf03876",
+      "channels": 2,
+      "sourceDurationSeconds": 11.752604
+    },
+    {
+      "file": "F2.mp3",
+      "midi": 41,
+      "sourceWav": "INSPiano_Vel03_F2_01.wav",
+      "sourceSha256": "af4ffb477280d450cd523669b6dcedbb98e278886686796ecd7a0988d47c7e8e",
+      "sha256": "3c1f0b843a59ceac2a4ea00727f751324b976778b99f0ccd396480f1d1f8c2ac",
+      "channels": 2,
+      "sourceDurationSeconds": 14.616354
+    },
+    {
+      "file": "F3.mp3",
+      "midi": 53,
+      "sourceWav": "INSPiano_Vel03_F3_01.wav",
+      "sourceSha256": "175e2ed05cdfb574cf7bbfcbc3f15666f9ae077687a06ff56718aaa4b6193fe6",
+      "sha256": "c2b6c3bcfb54b54cfe834b3db438cc824868d4cf9d10fe9f7fbcb3d77ee41100",
+      "channels": 2,
+      "sourceDurationSeconds": 14.948813
+    },
+    {
+      "file": "F4.mp3",
+      "midi": 65,
+      "sourceWav": "INSPiano_Vel03_F4_01.wav",
+      "sourceSha256": "457dce6baea7abb42d15eaa605c6dc426301db9e937721e4843c9216a3ba6fd6",
+      "sha256": "af23a0da64c87401ad3c7ce3a721c3a94ed4564cc4be54c997405b575cdb03be",
+      "channels": 2,
+      "sourceDurationSeconds": 7.413625
+    },
+    {
+      "file": "F5.mp3",
+      "midi": 77,
+      "sourceWav": "INSPiano_Vel03_F5_01.wav",
+      "sourceSha256": "44283059564af583ab300a8976f908911bf4a14c37a1f25b65170314eeccb899",
+      "sha256": "a4abbb93f470fa663c3e0a9ebb1ff8d1eae3f17ed63dc3201460318e01f4a865",
+      "channels": 2,
+      "sourceDurationSeconds": 10.632625
+    },
+    {
+      "file": "F6.mp3",
+      "midi": 89,
+      "sourceWav": "INSPiano_Vel03_F6_01.wav",
+      "sourceSha256": "0843818f2b5464f28006b57ccfe0ba6e2219afe883d03b06be80360d8a274c04",
+      "sha256": "b13ea795db3d2147f831f3585b23e6605a60bce42584824ed35ff9dda64dc6fd",
+      "channels": 2,
+      "sourceDurationSeconds": 4.121104
+    },
+    {
+      "file": "F7.mp3",
+      "midi": 101,
+      "sourceWav": "INSPiano_Vel03_F7_01.wav",
+      "sourceSha256": "404f3a0514422fb598572aff61c5a8d66248711e1f8664e7e493e27c99c937a0",
+      "sha256": "bd68688edf8eaefaa499cf6762764f8630fb0279706f89463638e2b2eee420fd",
+      "channels": 2,
+      "sourceDurationSeconds": 3.220958
+    },
+    {
+      "file": "Gb1.mp3",
+      "midi": 30,
+      "sourceWav": "INSPiano_Vel03_Fs1_01.wav",
+      "sourceSha256": "0decbbf22e49c4de3fb25ea5ab252ca9692ce6ab02c302a65d2491db85fed6ed",
+      "sha256": "701beeb4bfb08dda64fe4c4414358d2ad0c732baad63b17b347ef34a23e9aa8c",
+      "channels": 2,
+      "sourceDurationSeconds": 10.670125
+    },
+    {
+      "file": "Gb2.mp3",
+      "midi": 42,
+      "sourceWav": "INSPiano_Vel03_Fs2_01.wav",
+      "sourceSha256": "203c5b6824aad6942ea335b5b2b3fa7f3778e6e42da47e29d14c471a353b3b77",
+      "sha256": "256d00501720f6d586a22f81ec5fb188fbd6d885598bb5719604d73f7488924d",
+      "channels": 2,
+      "sourceDurationSeconds": 15.171708
+    },
+    {
+      "file": "Gb3.mp3",
+      "midi": 54,
+      "sourceWav": "INSPiano_Vel03_Fs3_01.wav",
+      "sourceSha256": "124f035777a02e0ba002c30beabf84fc9bc42bbaf533ca79575976f54d2d6557",
+      "sha256": "af500eefb1bc7d60218cee916529c09ecd0fa1a2f06a6af8715c681f664eb3a2",
+      "channels": 2,
+      "sourceDurationSeconds": 13.321146
+    },
+    {
+      "file": "Gb4.mp3",
+      "midi": 66,
+      "sourceWav": "INSPiano_Vel03_Fs4_01.wav",
+      "sourceSha256": "a97f1f3920541f36df30ba0392632e3ce9d02027cbe6985205c472dad02817dd",
+      "sha256": "a35080d679398326f8924530977a96e825cff97ff5f34b397d96e869f27055b2",
+      "channels": 2,
+      "sourceDurationSeconds": 10.468042
+    },
+    {
+      "file": "Gb5.mp3",
+      "midi": 78,
+      "sourceWav": "INSPiano_Vel03_Fs5_01.wav",
+      "sourceSha256": "ce1c72c15810be195e99ab2a57f146393863c388d761559077ca4a7c50ea90c0",
+      "sha256": "6f6d5f8cb39c73354069fbe1be2f4789c54bad71c2e4767871dcbe98f4de5ed4",
+      "channels": 2,
+      "sourceDurationSeconds": 8.964458
+    },
+    {
+      "file": "Gb6.mp3",
+      "midi": 90,
+      "sourceWav": "INSPiano_Vel03_Fs6_01.wav",
+      "sourceSha256": "7812a81b9ca5d6cc335e7a48dc0f46dd260342c68db9e5fcb4ddb3b6f47dbd66",
+      "sha256": "5f69d790d7e2a36a10bcedbdcda98305c5065b7b527d42db8bc6c725f42bf338",
+      "channels": 2,
+      "sourceDurationSeconds": 4.400479
+    },
+    {
+      "file": "Gb7.mp3",
+      "midi": 102,
+      "sourceWav": "INSPiano_Vel03_Fs7_01.wav",
+      "sourceSha256": "0c9674d6dd9d8a0531c507206a9ed92bdf6aa032418c328bd44b9862f54f9891",
+      "sha256": "6decab799a6e69c8a297a2b1cf5ea1da4a286a369b6e35274ec1c3ef7fc68b88",
+      "channels": 2,
+      "sourceDurationSeconds": 2.691333
+    },
+    {
+      "file": "G1.mp3",
+      "midi": 31,
+      "sourceWav": "INSPiano_Vel03_G1_01.wav",
+      "sourceSha256": "f7a8f075dc678abdeb54e70ff4433e9e930874676a9ecc7adaa989091cb249db",
+      "sha256": "7b2e27f1b85e813acd7f2cbe8145c17ee080f8076cde9ee58278d21d7e774d01",
+      "channels": 2,
+      "sourceDurationSeconds": 11.205313
+    },
+    {
+      "file": "G2.mp3",
+      "midi": 43,
+      "sourceWav": "INSPiano_Vel03_G2_01.wav",
+      "sourceSha256": "821971eb2e86cec64ec952e7659a6142cb844e0e559b6774336130f4cae27ef7",
+      "sha256": "f56d5d3c00e28f683a8ae72a781590c06ec77897c72d295e39b7ee761cd54b2c",
+      "channels": 2,
+      "sourceDurationSeconds": 13.413833
+    },
+    {
+      "file": "G3.mp3",
+      "midi": 55,
+      "sourceWav": "INSPiano_Vel03_G3_01.wav",
+      "sourceSha256": "534c12bf52e4a25926a8c4d3046147407aac5245cedc627843d0232488f97004",
+      "sha256": "35bc6e710fbb003cb3d05738b6ca596f7b6d4c16afef74c23ab3c8f65e3e8a63",
+      "channels": 2,
+      "sourceDurationSeconds": 16.065729
+    },
+    {
+      "file": "G4.mp3",
+      "midi": 67,
+      "sourceWav": "INSPiano_Vel03_G4_01.wav",
+      "sourceSha256": "6125810ca52ad9ea8aee6192b361753e7fbca83fc00fd70d7bfb8818267a35dd",
+      "sha256": "2fe31eb3c09d34411eb9dda87708a8a9b7b6c5380510949eff8c09c47ae1e4b1",
+      "channels": 2,
+      "sourceDurationSeconds": 10.200667
+    },
+    {
+      "file": "G5.mp3",
+      "midi": 79,
+      "sourceWav": "INSPiano_Vel03_G5_01.wav",
+      "sourceSha256": "55f7bdf9cb891f5ad5727c8e2a0366d83694b55c382537b1d43fec3081a0df5c",
+      "sha256": "a6d4c360411372ee3679755706459fe668ced6a7b32e31c28ea41357c3e614a5",
+      "channels": 2,
+      "sourceDurationSeconds": 7.473792
+    },
+    {
+      "file": "G6.mp3",
+      "midi": 91,
+      "sourceWav": "INSPiano_Vel03_G6_01.wav",
+      "sourceSha256": "8b96c5b68e32be91fea09db40d77035a0754bf4c7f7b431e6692005281c6a985",
+      "sha256": "fa098fa52010eb30e86aa82055ebbe462bbe223aa4407257117914b4ab7b9d26",
+      "channels": 2,
+      "sourceDurationSeconds": 3.536896
+    },
+    {
+      "file": "G7.mp3",
+      "midi": 103,
+      "sourceWav": "INSPiano_Vel03_G7_01.wav",
+      "sourceSha256": "005f0e4613a76d9b0967b49385d7d9a062c5351a349de601c54413ada6eed713",
+      "sha256": "e0b189522900913b9ab13735e449756bcff593aaf1aeecd089ca25ad8051d6e7",
+      "channels": 2,
+      "sourceDurationSeconds": 2.8595
+    },
+    {
+      "file": "Ab1.mp3",
+      "midi": 32,
+      "sourceWav": "INSPiano_Vel03_Gs1_01.wav",
+      "sourceSha256": "2342f36f0dfbd0b60c6bf23adb65c16bf2dc6a3b6552f5e8284835933ffcf1af",
+      "sha256": "92f49339d5453af711d79f6b2bd96432de0f34449ac75806a8eeba52ecacd075",
+      "channels": 2,
+      "sourceDurationSeconds": 6.809271
+    },
+    {
+      "file": "Ab2.mp3",
+      "midi": 44,
+      "sourceWav": "INSPiano_Vel03_Gs2_01.wav",
+      "sourceSha256": "fe6a7498d5f58d85a16b1839d25607ff62e1c7b9d59dae26908cf1c0ebf76183",
+      "sha256": "ed67477c41f612be6de32f16141ced1115319fb01781bcb0cb7a0aa94efbedfa",
+      "channels": 2,
+      "sourceDurationSeconds": 13.250083
+    },
+    {
+      "file": "Ab3.mp3",
+      "midi": 56,
+      "sourceWav": "INSPiano_Vel03_Gs3_01.wav",
+      "sourceSha256": "12a83ff4006a40c823e22bb0ee08d732805d48765f5032006c65745b32d20b6d",
+      "sha256": "6cbb4967f4d1f3cf9e9db20b18b6e5fe2b626aeb89a66dde01d21361075c1f9d",
+      "channels": 2,
+      "sourceDurationSeconds": 12.9115
+    },
+    {
+      "file": "Ab4.mp3",
+      "midi": 68,
+      "sourceWav": "INSPiano_Vel03_Gs4_01.wav",
+      "sourceSha256": "5874f44c142eabb3c3aeb1822e47453c8b082061c9cda847a5cdffc8f726ab01",
+      "sha256": "db9aa12f3a4a914c561d21d3e5527487ac2b0517e0905595eb6f82034f7eb51c",
+      "channels": 2,
+      "sourceDurationSeconds": 10.156063
+    },
+    {
+      "file": "Ab5.mp3",
+      "midi": 80,
+      "sourceWav": "INSPiano_Vel03_Gs5_01.wav",
+      "sourceSha256": "5c0d250775977c5fa13f088fce901bccd0f56274d25f919450531e874d31ec75",
+      "sha256": "fc7992f83887dc0f849d438bec98943fad25989682ea1f8f249c7f12bdffbe48",
+      "channels": 2,
+      "sourceDurationSeconds": 8.946208
+    },
+    {
+      "file": "Ab6.mp3",
+      "midi": 92,
+      "sourceWav": "INSPiano_Vel03_Gs6_01.wav",
+      "sourceSha256": "42c3e43f223fdd1146cf7080f44f40539b3ab2dd023e07d004b8c97c2f52396c",
+      "sha256": "8adc0914f21438c610839c6af03c0c38cc8200e1b187d1bdd404138b6b14023d",
+      "channels": 2,
+      "sourceDurationSeconds": 5.064792
+    },
+    {
+      "file": "Ab7.mp3",
+      "midi": 104,
+      "sourceWav": "INSPiano_Vel03_Gs7_01.wav",
+      "sourceSha256": "1f0632dc4e7d7e1ad67a8a71add96b9f45067009f24c6ddc211605667d25cbeb",
+      "sha256": "45c6ae31c675f5c74fe6b9ad2a6a4b32e3033c5d3fcfb43ca8ea6a897653922b",
+      "channels": 2,
+      "sourceDurationSeconds": 3.839083
+    }
+  ]
+}

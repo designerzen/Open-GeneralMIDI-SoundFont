@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Piano audition — OpenGM24 / Meta</title>
+<style>
+  :root { color-scheme: light dark; font: 17px/1.6 system-ui,sans-serif; }
+  body { max-width: 780px; margin: 3rem auto; padding: 0 1.5rem; }
+  h1 { line-height: 1.2; } label { display: block; margin: 1rem 0; }
+  button, select { font: inherit; padding: .6rem 1rem; margin: .25rem; }
+  input { vertical-align: middle; } #keys { display:flex; flex-wrap:wrap; }
+  #keys button { min-width: 64px; touch-action:none; }
+  button:active { background: #6b9bce; } small { display:block; opacity:.8; }
+  #status { min-height: 3em; } a { color: #508bd0; }
+</style>
+<h1>Piano audition</h1>
+<p>Compare the original bright piano with the WAV-sourced replacement. Hold a note or
+play a chord. Switch instruments and repeat with the same velocity.</p>
+<label>Instrument <select id="instrument"><option value="legacy">Original bright piano</option><option value="compatibility" selected>New bright piano — single dynamic</option><option value="meta">Meta upright — four dynamics</option></select></label>
+<label>Velocity <input id="velocity" type="range" min="1" max="127" value="80"> <output id="velocityValue">80</output></label>
+<label><input id="sustain" type="checkbox"> Sustain pedal</label>
+<div id="keys"></div>
+<p><button id="chord">Play C major chord</button> <button id="stop">Stop all</button></p>
+<p id="status" role="status">Loading sample map…</p>
+<small>All new MP3s are encoded directly from the original WAVs. The four-dynamic mode
+selects and blends recordings; single-dynamic modes use velocity as gain.
+This comparison is not loudness matched.</small>
+<p><a href="../docs/meta-piano-investigation.md">Investigation and integration plan</a> ·
+<a href="../gh-pages/MetaPiano/LICENSE">Meta sample license (CC0)</a></p>
+<script type="module">
+const $ = id => document.getElementById(id);
+const packURL = new URL('../gh-pages/MetaPiano/playback.json', location.href);
+const packBase = new URL('.', packURL);
+const ctx = new AudioContext();
+const master = ctx.createGain();
+master.gain.value = 0.45;
+master.connect(ctx.destination);
+const cache = new Map(), held = new Set(), pedal = new Set();
+let samples;
+try {
+  const response = await fetch(packURL);
+  if (!response.ok) throw new Error(`HTTP ${response.status}`);
+  const pack = await response.json();
+  samples = new Map(pack.samples.map(s => [`${s.midi}/${s.layer}`, s.file]));
+  $('status').textContent = 'Ready. Samples load on first use and are cached for this session.';
+} catch (error) {
+  $('status').textContent = 'Meta pack unavailable. Run: python scripts/import-meta-piano.py. The installed bright piano still works.';
+}
+$('velocity').oninput = () => $('velocityValue').value = $('velocity').value;
+function layers(velocity) {
+  for (let i = 0; i < 3; i++) {
+    const lo = [24, 56, 88][i], hi = lo + 15;
+    if (velocity >= lo && velocity <= hi) {
+      const angle = (velocity - lo) / (hi - lo) * Math.PI / 2;
+      return [[i + 1, Math.cos(angle)], [i + 2, Math.sin(angle)]];
+    }
+  }
+  return [[velocity < 32 ? 1 : velocity < 64 ? 2 : velocity < 96 ? 3 : 4, 1]];
+}
+async function buffer(url) {
+  if (!cache.has(url)) {
+    cache.set(url, fetch(url).then(r => {
+      if (!r.ok) throw new Error(`HTTP ${r.status}: ${url}`);
+      return r.arrayBuffer();
+    }).then(bytes => ctx.decodeAudioData(bytes)).catch(error => { cache.delete(url); throw error; }));
+  }
+  return cache.get(url);
+}
+function release(voice, force = false) {
+  if (voice.released) return;
+  if (!force && $('sustain').checked) { pedal.add(voice); return; }
+  voice.released = true;
+  held.delete(voice); pedal.delete(voice);
+  for (const { source, gain } of voice.nodes) {
+    gain.gain.cancelScheduledValues(ctx.currentTime);
+    gain.gain.setValueAtTime(gain.gain.value, ctx.currentTime);
+    gain.gain.linearRampToValueAtTime(0, ctx.currentTime + .035);
+    source.stop(ctx.currentTime + .04);
+  }
+}
+function start(notes) {
+  const voice = { nodes: [], released: false };
+  held.add(voice);
+  const instrument = $('instrument').value, velocity = Number($('velocity').value);
+  (async () => {
+    await ctx.resume();
+    const pending = notes.flatMap(([midi, name]) => {
+      if (instrument !== 'meta') {
+        const folder = instrument === 'legacy' ? '../gh-pages/MetaPiano-source/previous-bright/' : '../OpenGM24/bright_acoustic_piano-mp3/';
+        return [[new URL(`${folder}${name}.mp3`, location.href).href, velocity / 127]];
+      }
+      if (!samples) throw new Error('Import the Meta pack first.');
+      return layers(velocity).map(([layer, gain]) => [new URL(samples.get(`${midi}/${layer}`), packBase).href, gain]);
+    });
+    const decoded = await Promise.all(pending.map(async ([url, gain]) => [await buffer(url), gain]));
+    if (voice.released) return;
+    const when = ctx.currentTime + .01;
+    for (const [audio, level] of decoded) {
+      const source = ctx.createBufferSource(), gain = ctx.createGain();
+      source.buffer = audio; gain.gain.value = level;
+      source.connect(gain).connect(master);
+      source.onended = () => {
+        source.disconnect(); gain.disconnect();
+        if (voice.nodes.every(n => n.ended || n.source === source)) { held.delete(voice); pedal.delete(voice); }
+        const node = voice.nodes.find(n => n.source === source); if (node) node.ended = true;
+      };
+      voice.nodes.push({ source, gain }); source.start(when);
+    }
+    const label = instrument === 'meta' ? 'Meta upright — four dynamics' : instrument === 'legacy' ? 'Original bright piano' : 'New bright piano';
+    $('status').textContent = `${label} · velocity ${velocity} · ${notes.map(n => n[1]).join(', ')}`;
+  })().catch(error => { release(voice, true); $('status').textContent = `Playback failed: ${error.message}`; });
+  return voice;
+}
+for (const [midi, name] of [[45,'A2'],[48,'C3'],[60,'C4'],[61,'Db4'],[64,'E4'],[67,'G4'],[72,'C5'],[84,'C6']]) {
+  const button = document.createElement('button'); button.textContent = name;
+  let voice;
+  button.onpointerdown = event => { event.preventDefault(); button.setPointerCapture(event.pointerId); voice = start([[midi,name]]); };
+  button.onpointerup = button.onpointercancel = () => { if (voice) release(voice); };
+  button.onkeydown = event => { if (!event.repeat && [' ', 'Enter'].includes(event.key)) { event.preventDefault(); voice = start([[midi,name]]); } };
+  button.onkeyup = event => { if ([' ', 'Enter'].includes(event.key) && voice) release(voice); };
+  $('keys').append(button);
+}
+$('chord').onclick = () => { const voice = start([[60,'C4'],[64,'E4'],[67,'G4']]); setTimeout(() => release(voice), 2000); };
+$('sustain').onchange = () => { if (!$('sustain').checked) for (const voice of [...pedal]) release(voice, true); };
+$('stop').onclick = () => { for (const voice of [...held]) release(voice, true); };
+window.addEventListener('blur', () => { for (const voice of [...held]) release(voice, true); });
+</script>
+</html>

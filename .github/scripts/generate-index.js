@@ -703,6 +703,7 @@ const html = `<!DOCTYPE html>
     <footer>
       <p>OpenGM24 - General MIDI Soundfont Repository</p>
       <p>Derived from open-source soundfont sources with Creative Commons licenses</p>
+      <p><a href="./ATTRIBUTIONS.md">Contributions and attributions</a> · <a href="./LICENSE.txt">License information</a></p>
       <p><a href="https://github.com/designerzen/open-generalmidi-soundfont">View on GitHub</a> | <a href="feed.json">📡 JSON Feed</a></p>
     </footer>
   </div>
@@ -891,6 +892,11 @@ console.log('✓ Saved enhanced index.json with notes to gh-pages');
 
 fs.copyFileSync('./OpenGM24.json', './gh-pages/OpenGM24.json');
 console.log('✓ Copied OpenGM24.json to gh-pages');
+
+// Publish source credits and collection license alongside the audio banks.
+for (const filename of ['ATTRIBUTIONS.md', 'LICENSE.txt']) {
+  fs.copyFileSync(`./${filename}`, `./gh-pages/${filename}`);
+}
 
 // Copy entire OpenGM24 directory with all MP3 files
 const { execSync } = require('child_process');

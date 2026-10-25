@@ -65,6 +65,27 @@ This soundfont collection is derived from the following open-source soundfont so
 
 ### Primary Sources
 
+- **Meta Piano** (`bright_acoustic_piano`, GM program 1)
+  - Source: [Meta Open Sound WAV release](https://github.com/facebookincubator/Meta-open-sound/releases/tag/meta-piano-v1.0.0)
+  - License: CC0 1.0 Universal
+  - Original 24-bit / 48 kHz WAVs encoded directly to MP3 with LAME VBR quality 5 for smaller downloads
+  - Uses the mezzo-forte layer for the existing single-sample-per-note layout; full decays and source levels are preserved
+  - Rebuild with `python scripts/import-meta-piano.py` (Python 3.11+, FFmpeg and FFprobe)
+
+- **Meta Nylon Guitar** (`acoustic_guitar_nylon`, GM program 24)
+  - Source: [Meta Open Sound WAV release](https://github.com/facebookincubator/Meta-open-sound/releases/tag/meta-nylon-guitar-v1.0.0)
+  - License: CC0 1.0 Universal
+  - Fingerstyle recordings, encoded directly from 24-bit / 48 kHz WAVs to MP3 at LAME VBR quality 4
+  - Native notes E2–B5; nearest-note transposition preserves the remaining existing note URLs
+
+- **Meta Steel Guitar** (`acoustic_guitar_steel`, GM program 25)
+  - Source: [Meta Open Sound WAV release](https://github.com/facebookincubator/Meta-open-sound/releases/tag/meta-steel-guitar-v1.0.0)
+  - License: CC0 1.0 Universal
+  - Medium-picked recordings, encoded directly from 24-bit / 48 kHz WAVs to MP3 at LAME VBR quality 4
+  - Native notes E2–C6; nearest-note transposition preserves the remaining existing note URLs
+
+Rebuild both guitars with `python scripts/import-meta-guitars.py` (Python 3.11+, FFmpeg and FFprobe). Each instrument retains 88 note files using its existing folder and filenames. Native notes preserve source channels, levels and full decays. Transposed extensions outside the recorded register have less natural timbre and proportionally changed decay lengths. See [guitar conversion details](docs/meta-guitars.md).
+
 - **Fluid Soundfont (FluidR3_GM.sf2)**
   - Source: [FluidR3_GM.sfArk](http://www.synthfont.com/SoundFonts/FluidR3_GM.sfArk) (148 MB uncompressed)
   - License: [Creative Commons Attribution 3.0](https://creativecommons.org/licenses/by/3.0/us/)
@@ -80,7 +101,13 @@ This soundfont collection is derived from the following open-source soundfont so
   - License: [Creative Commons Attribution Share-Alike 3.0](https://creativecommons.org/licenses/by-sa/3.0/)
   - Reference: [MIDI.js Soundfonts - FatBoy](https://gleitz.github.io/midi-js-soundfonts/FatBoy/)
 
+## Contributions and attributions
+
+Thanks to Meta's Creative Audio team for the piano and both acoustic guitar recordings, and to the original soundfont creators, gleitz, mudcube, and this repository's contributors. See [the consolidated contribution and attribution list](ATTRIBUTIONS.md) and [license information](LICENSE.txt) for sources, licenses, and conversion details.
+
 ## Notes
+
+- For the Meta bright piano source verification, transcoding details, and four-dynamic audition, see [the Meta Piano investigation](docs/meta-piano-investigation.md).
 
 - All sounds are provided as MP3 files for web compatibility and reasonable file sizes
 - See `OpenGM24.json` for the complete instrument list in JSON format

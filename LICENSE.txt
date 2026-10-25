@@ -1,7 +1,7 @@
 OpenGM24 - License Information
 ==============================
 
-OpenGM24 is derived from the following open-source soundfont sources, each licensed under Creative Commons licenses:
+OpenGM24 is derived from the following sources, each licensed under the terms listed below:
 
 1. Fluid Soundfont (FluidR3_GM.sf2)
    - License: Creative Commons Attribution 3.0
@@ -23,10 +23,36 @@ OpenGM24 is derived from the following open-source soundfont sources, each licen
    - URL: https://creativecommons.org/licenses/by-sa/3.0/
    - Source: https://gleitz.github.io/midi-js-soundfonts/Tabla/Tabla.sf2
 
+5. Meta Piano (bright_acoustic_piano-mp3)
+   - License: CC0 1.0 Universal
+   - URL: https://creativecommons.org/publicdomain/zero/1.0/
+   - Source: https://github.com/facebookincubator/Meta-open-sound/releases/tag/meta-piano-v1.0.0
+   - Original 24-bit / 48 kHz WAVs transcoded directly to MP3; mezzo-forte layer
+   - See OpenGM24/bright_acoustic_piano-mp3/LICENSE.txt and SOURCE.json
+   - This sample set remains CC0 and is excluded from the derived-work license below
+
+6. Meta Nylon Guitar (acoustic_guitar_nylon-mp3)
+   - License: CC0 1.0 Universal
+   - URL: https://creativecommons.org/publicdomain/zero/1.0/
+   - Source: https://github.com/facebookincubator/Meta-open-sound/releases/tag/meta-nylon-guitar-v1.0.0
+   - Original WAVs transcoded to MP3 at LAME VBR quality 4; fingerstyle layer
+   - Native E2-B5 recordings; nearest-note transposition outside that range
+   - See OpenGM24/acoustic_guitar_nylon-mp3/LICENSE.txt and SOURCE.json
+
+7. Meta Steel Guitar (acoustic_guitar_steel-mp3)
+   - License: CC0 1.0 Universal
+   - URL: https://creativecommons.org/publicdomain/zero/1.0/
+   - Source: https://github.com/facebookincubator/Meta-open-sound/releases/tag/meta-steel-guitar-v1.0.0
+   - Original WAVs transcoded to MP3 at LAME VBR quality 4; medium-picked layer
+   - Native E2-C6 recordings; nearest-note transposition outside that range
+   - See OpenGM24/acoustic_guitar_steel-mp3/LICENSE.txt and SOURCE.json
+
+The Meta Piano, Meta Nylon Guitar, and Meta Steel Guitar sample sets remain CC0.
+
 Derived Work License
 ====================
 
-This repository and the OpenGM24 soundfont collection are provided under the terms of the
+Except for the three CC0 Meta sample sets identified above, this repository and the OpenGM24 soundfont collection are provided under the terms of the
 Creative Commons Attribution Share-Alike 3.0 license, which is compatible with and encompasses
 the licenses of all source materials:
 
@@ -45,6 +71,14 @@ Under the following terms:
 
 Attribution
 ===========
+
+Meta's Creative Audio team contributed the original piano, nylon guitar, and
+steel guitar recordings, released through Meta Open Sound under CC0 1.0 Universal:
+https://github.com/facebookincubator/Meta-open-sound
+Credit is voluntary for these CC0 recordings. Re-encoding and guitar range
+extensions are documented in each instrument's SOURCE.json.
+
+See ATTRIBUTIONS.md for the consolidated contributions and source credits.
 
 This work is based on the MIDI.js Soundfonts project by gleitz:
 https://github.com/gleitz/midi-js-soundfonts
