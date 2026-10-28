@@ -27,8 +27,7 @@ levels and complete decays. No OGG previews are used as conversion sources.
 
 Each folder's `SOURCE.json` records the release URL, archive SHA-256, source and
 output sample hashes, encoding settings, and note mapping. Guitar records also
-identify source string, source pitch, and any transposition. The import scripts
-and documentation describe the conversion work contributed in this repository.
+identify source string, source pitch, and any transposition.
 
 ## Original soundfont sources
 
@@ -54,5 +53,4 @@ this repository. They continue to supply other instruments in the collection.
   on which this collection's soundfont rendering work is based.
 - **mudcube** — [MIDI.js](https://github.com/mudcube/MIDI.js).
 - **OpenGM24 contributors** — collection assembly, personally recorded variations,
-  instrument metadata, the catalog and preview site, and reproducible conversion
-  and source-verification scripts.
+  instrument metadata, sample conversion, and source verification.
